@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>레이아웃 좌우배치</title>
+		<style type="text/css">
+			/* css 초기화하기 */
+	/* 		*{
+				margin: 0px; 
+				padding: 0px;
+			}	
+	*/
+		
+			/* 전체 설정 */
+			.wrap {
+				width: 800px;			/* 너비 800px */
+				margin: 100px auto;		/* 상하 100px , 좌우 중앙정렬 */
+				border: 5px solid black;/* 테두리 5px 실선 블랙 */
+			}
+			/* 왼쪽 설정 */
+			.wrap .left{
+				width: 400px;			/* 너비 400px */
+				height: 400px;			/* 높이 400px */
+				background-color: pink; /* 배경색 핑크 */
+				float: left;			/* float 으로 옆으로 나열 (좌우배치) */
+			}
+			/* 오른쪽 설정 */
+			.wrap .right{
+				width: 400px;
+				height: 400px;
+				background-color: lightblue;
+				float: left;
+			}
+			
+			/* 가상요소: float 해제 : 선택한 요소의 끝부분에 생성된 콘테츠를 추가 */
+			.wrap::after{
+			  content:'';		/* 빈 여백 주기 */
+			  display:block; 	/* 블록 레벨 요소로 변경 */
+			  clear: both; 		/* float 해제 */
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- Float을 이용한 블록요소 좌우 배치 -->
+		<div class="wrap">
+		   <section class="left"></section>
+		   <section class="right"></section>
+		</div>
+		
+	</body>
+</html>

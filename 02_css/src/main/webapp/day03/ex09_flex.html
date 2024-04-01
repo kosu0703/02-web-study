@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			section{
+				width: 100%;
+				background-color: lightcyan;
+				display: flex;
+				justify-content: center;	/* 자식(아티클)의 기본축 가운데 */
+			}
+			article{
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+				border: 1px solid black;
+				font-size: 50px;
+				color: white;
+				display: flex;				/* 아티클을 가로축으로 정렬 */
+				justify-content: center;	/* 자식(글자)의 기본축 가운데 */
+				align-items: center;		/* 자식(글자)의 반대축 가운데 */
+			}
+			/* order : 자식 순서 바꾸기 */
+			article:nth-of-type(1) {
+				order: 2;
+			}		
+			article:nth-of-type(2) {
+				order: 3;
+			}		
+			article:nth-of-type(3) {
+				order: 1;
+			}		
+		</style>
+	</head>
+	<body>
+	
+		<section>
+			<article>1</article>
+			<article>2</article>
+			<article>3</article>
+		</section>
+	
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>그리드-자동배치</title>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #eee;
+				font-size: 16px;
+			}
+			/* 그리드 설정 */
+			.wrapper{
+				display: grid;
+				/* auto-fit => 너비에 따라 자동으로 칸의 개수를 조정 */
+				/* minmax => 칸의 너비가 최소 320px */
+				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+				grid-gap: 1rem;
+			}
+			/* 카드 모양 */
+			.card{
+				background-color: white;
+				box-shadow: 0px 1px 5px #222;
+			}
+			/* 사진 제목 */
+			.card > header{
+				font-size: 1.5rem;
+				padding: 0.5rem;
+			}
+			.card > p{
+				padding: 0.5rem;
+				/* 글자와 라인사이의 간격 */
+				line-height: 1.6em;
+			}
+			/* 원본사진 크기 */
+			.card > img{
+				max-width: 100%;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-1.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-2.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-3.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-4.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-5.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-6.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-7.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+	
+			<div class="card">
+				<header>
+					<h3>사진 제목</h3>
+				</header>
+				<figure>
+					<img src="../images/cup-8.jpg">
+				</figure>
+				<p>사진 설명 : Lorem ipsum dolor sit amet, consectetur adipisicing
+					elit. Ullam, numquam. Neque mollitia esse blanditiis facere.</p>
+			</div>
+		</div>
+	</body>
+</html>

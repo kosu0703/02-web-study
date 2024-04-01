@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연습문제</title>
+		<style type="text/css">
+			table {
+				width: 60%;
+				margin: 0 auto;
+				padding: 10px, 10px;	
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<table>
+			<tbody>
+				<tr><td colspan="3">개인정보</td><td>이름</td><td rowspan="2"> </td><td> </td></tr>
+				<tr><td>학과/학번</td><td rowspan="2"> </td><td> </td></tr>
+				<tr><td>연락처</td><td rowspan="2"> </td><td> </td></tr>
+				<tr><td>지원분야</td><td rowspan="3"> </td><td> </td><td> </td></tr>
+			</tbody>			
+		</table>
+	</body>
+</html>

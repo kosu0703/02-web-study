@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>xml 데이터 가져오기</title>
+		<style type="text/css">
+		    table {
+		        width: 600px; margin-top: 50px; border-collapse: collapse;
+		    }
+		    table, th, td {border: 1px solid green; text-align: center;}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		/* 
+			기본 형식
+			
+			$.ajax({
+				url 	: "읽어올 서버 페이지의 위치" ,
+				method 	: get, post 방식 지정 ,
+				data 	: 요청할때(서버페이지에 갈때) 전달되는 파라미터(데이터) ,
+				dataType: 응답결과의 데이터 형태 (xml, html, text, json) , 
+				success : function(){} => 성공했을때 실행 동작 ,
+				error 	: function(){} => 실패했을때 실행 동작 
+			});
+		
+		*/	
+			
+			$(function() {
+				$("#btn").click(function() {
+					$("#result").empty();
+					
+					$.ajax({
+						url : "data03.xml",
+						method : "get",
+						dataType : "xml",
+						success : function(data) {
+							let table = "<table>";
+							table += "<thead>";
+							table += "<tr><th>회사</th><th>이름</th><th>개수</th></tr>";
+							table += "</thead>";
+							table += "<tbody>";
+							
+							$(data).find("product").each(function() {	
+								let company = $(this).text();
+								let name = $(this).attr("name");
+								let count = $(this).attr("count");
+								table += "<tr>" ;
+								table += `<td>${company}</td>` ;
+								table += `<td>${name}</td>` ;
+								table += `<td>${count}</td>` ;
+								table += "</tr>" ;
+							});
+							
+							table += "</tbody></table>";
+							$("#result").append(table);
+						},
+						error : function() {
+							alert("가져오기 실패");
+						}
+					});
+					
+				})
+				
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div id="btn">가져오기</div>
+		<div id="result"></div>
+	
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>모서리 둥글게 만들기</title>
+		<style type="text/css">
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				margin: 50px;
+				float: left;
+				border-radius: 30px;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 50px;
+				float: left;
+				border-radius: 50%;		/* 테두리의 절반을 둥글게 => 원 */
+			}
+			#container{
+				width: 350px;
+			}
+			img{
+				border: 1px solid #777;
+				border-radius: 50%;					/* 회원가입하면 프로필 아이콘 설정할때 */
+				box-shadow: 10px 10px 20px black;	/* 두가지 사용해서 만듦 */
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1"></div>
+		<div class="box2"></div>
+		
+		<hr>
+		
+		<div id="container">
+			<img alt="#" src="../images/bear.jpg">
+		</div>
+		
+	</body>
+</html>

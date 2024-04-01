@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- 헤드 head 태그에는 <style> 과 <script> 가 들어갈 수 있다. -->
+		<meta charset="UTF-8">
+		<title>HTML-JS</title>
+		<script type="text/javascript">
+			function setMsg() {
+				document.getElementById('memo3').innerHTML = Date();
+			}
+			function setMsg2() {
+				/* style 사용 */
+				document.getElementById('memo4').style.fontSize="25px";
+				document.getElementById('memo4').style.color="red";
+				document.getElementById('memo4').style.backgroundColor="yellow";
+			}
+			function setMsg3() {
+				/* 스타일 제거 (원상복귀) */
+				document.getElementById('memo4').style="none";
+			}
+			function img_on() {
+				/* 해당 id 의 속성 중 src 를 변경한다는 의미 */
+				document.getElementById('img').src="../images/img06_2.gif";
+			}
+			function img_off() {
+				/* 해당 id 의 속성 중 src 를 변경한다는 의미 */
+				document.getElementById('img').src="../images/img06_1.gif";
+			}
+		</script>
+	</head>
+	<body>
+<!-- 
+		javascript 는 <script> 에서 정의하고 사용된다.
+		<head> 와 <body> 에서도 모두 사용 가능하다.
+		
+		태그 속성 중 onXXX() 속성은 javascript 의 function 을 호출하는 것이다. 
+ -->
+ 
+ 		<h2>자바스크립트 사용</h2>
+ 		<p>자바스크립트를 이용해서 html 텍스트 넣기</p>
+ 		<hr>
+		
+		<!-- id 호출한 곳 위에서 사용하면 p 태그 내용이 출력 -->
+		<!-- html 은 위에서부터 아래로 내려오면서 실행되기때문에 -->
+ 		
+ 		<p id="memo">Memo</p>
+		
+		<!-- id 호출한 곳 아래에서 사용 -->
+		<script type="text/javascript">
+			document.getElementById("memo").innerHTML = "Hello JavaScript";
+		</script>
+		<hr>
+		
+		<!-- 버튼을 누르면 Memo2 가 날짜로 변경 -->
+		<!-- 함수의 내용을 직접 써서 사용 -->
+		<p id="memo2">Memo2</p>
+		<button onclick="document.getElementById('memo2').innerHTML = Date()">눌러주세요</button>
+		
+		<!-- 오류나면 웹 페이지에서 f12 누르면 우상단에 오류가 표시된다. -->
+		<hr>
+		
+		<!-- 함수를 호출해서 사용 -->
+		<!-- 함수는 head 부분에 만든다. -->
+		<p id="memo3"></p>
+		<button onclick="setMsg()">눌러주세요1</button>
+ 		<hr>
+
+		<!-- 버튼을 이용하여 함수 호출해서 스타일 변경 --> 		
+		<p id="memo4">한국 ICT 인재 개발원</p>
+		<button onclick="setMsg2()">글자 스타일 변경</button>
+		<button onclick="setMsg3()">원래대로</button>
+ 		<hr>
+ 		
+ 		<!-- 버튼을 이용하여 함수 호출해서 src 변경 -->
+ 		<img id="img" src="../images/img06_1.gif">
+		<button onclick="img_on()">켜기</button>
+		<button onclick="img_off()">끄기</button>
+ 	
+	</body>
+</html>

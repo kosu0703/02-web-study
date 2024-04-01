@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>블록 레벨 요소, 인라인 요소</title>
+	</head>
+	<body>
+<!-- 
+		1. block level element : 항상 새로운 줄에서 시작하며, 한줄 전체 너비를 차지한다.
+			=> 태그에는 div , p , h1~g6 , table , form , ul , hr 등이 있다.
+			
+		2. inline element : 필요한 만큼만 너비를 차지한다.
+			=> 태그에는 span , input , button , label , img , a 등이 있다.
+
+		** 인라인 요소에는 블록 레벨 요소가 포함될 수 없다.
+ -->
+ 
+ 		<!-- div : 다른 요소(태그)들을 포함하는 컨테이너 역할을 한다. -->
+ 		<!-- 		또는 영역을 나누는 역할을 한다. -->
+ 		<div style="background-color: red;">Hello World</div>
+		<br>
+ 		
+ 		<!-- span : 인라인 -->
+ 		<span style="background-color: green;">Hello World</span>
+ 		<br>
+ 		<hr>
+ 		
+ 		<div style="background-color: yellow;">
+ 			<h2>London</h2>
+	  		<p>London is the capital city of England.</p>
+	  		<p>London has over 13 million inhabitants.</p>
+ 		</div>
+ 		
+ 		
+ 		
+ 		
+	</body>
+</html>

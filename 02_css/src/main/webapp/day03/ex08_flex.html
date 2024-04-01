@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex 이용하여 레이아웃 만들기</title>
+		<style type="text/css">
+			/* 초기화 */
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			/* 전체 */
+			main{
+				width: 100%;	
+				height: 100vh;
+				background-color: lightcyan;
+			}
+			/* 섹션 */
+			section{
+				border: 10px solid blue;
+				display: flex;
+				width: 100%;
+				height: 100%;
+				/* 섹션 끝에서 부터 아티클이 시작됨 */
+				flex-flow: row wrap;
+				box-sizing: border-box;
+				/* 섹션의 시작 기준으로 정렬 */
+				justify-content: flex-start;
+				/* 섹션의 끝 기준으로 정렬 */
+				justify-content: flex-end;
+				/* 섹션의 중앙 기준으로 정렬 */
+				justify-content: center;
+				/* 양쪽끝을 채운뒤에, 섹션의 자식요소에 여백을 균일하게 배분 */
+				justify-content: space-between;
+				/* 섹션의 자식요소에 여백을 균일하게 배분 (처음과 끝은 중첩되지않아서 여백이 적다.) */
+				justify-content: space-around;
+				/* 섹션의 자식요소에 여백을 균일하게 배분 (처음과 끝도 중첩여백만큼 부여) */				
+				justify-content: space-evenly;
+				/* 자식 요소를 기본축의 반대축에서 가운데 정렬 */
+				align-items: center;
+			}
+			/* 섹션 안에있는 아티클 */
+			section article{
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<main>
+			<section>
+				<article>1</article>
+				<article>2</article>
+				<article>3</article>
+				<article>4</article>
+				<article>5</article>
+			</section>
+		</main>
+	
+	</body>
+</html>

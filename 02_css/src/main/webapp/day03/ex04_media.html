@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>미디어 쿼리 연습문제</title>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;		/* 크기가 변경되도 레이아웃을 맞추기위해 */
+			}
+			.left{
+				width: 20%;
+				padding: 20px;
+				float: left;
+				background-color: skyblue;
+			}
+			.main{
+				width: 60%;
+				padding: 20px;
+				float: left;
+				background-color: lightgray;
+			}
+			.right{
+				width: 20%;
+				padding: 20px;
+				float: left;
+				background-color: olive;
+			}
+			/* 스크린의 너비가 800px 이하일때 */				/* 이상이면, 크면 min */
+			@media screen and (max-width: 800px){	/* 이하이면, 작으면 max */
+				.left, .main, .right{
+					/* 부모가 body 이므로 화면을 꽉채우겠다 */
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="left">
+			<p>left menu</p>
+		</div>
+	
+		<div class="main">
+			<p>main content</p>
+		</div>
+	
+		<div class="right">
+			<p>right content</p>
+		</div>
+	
+	</body>
+</html>

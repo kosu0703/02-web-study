@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>비디오 & 오디오</title>
+	</head>
+	<body>
+<!-- 
+		controls : 컨트롤러 보이게
+		autoplay : 자동 실행
+		loop : 반복 실행
+		muted : 음소거 , autoplay 와 같이 사용해야한다.
+ -->	
+		<!-- 비디오 -->
+		<video src="../multi/mov_bbb.mp4" controls autoplay loop muted></video>
+		<hr>
+		<!-- 너비 높이 지정 -->
+		<video width=500 height=500 controls autoplay loop muted>
+			<source src="../multi/mov_bbb.mp4">
+		</video>
+		<hr>
+		
+		<!-- 오디오 -->
+		<!-- 자동실행 안된다. -->
+		<audio src="../multi/All.mp3" controls></audio>
+		<hr>
+		<audio controls>
+			<source src="../multi/All.mp3">
+		</audio>
+	</body>
+</html>

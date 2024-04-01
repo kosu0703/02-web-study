@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>flex 이용하여 레이아웃 만들기</title>
+		<style type="text/css">
+			/* 초기화 */
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			/* 전체 */
+			main{
+				width: 100%;	
+				height: 100vh;
+				background-color: lightcyan;
+			}
+			/* 섹션 */
+			section{
+				border: 10px solid blue;
+				
+				/* 자신은 인라인 속성을 유지하면서, 자식은 flex 환경설정 */
+				display: inline-flex;
+
+				/* 자신은 블록 레벨 속성을 유지하면서, 자식은 flex 환경설정 */
+				display: flex;
+				
+				/* 기본축을 세로로 변경 */
+				flex-direction: column;
+
+				/* 기본축을 가로로 변경(생략 가능) */
+				flex-direction: row;
+				
+				/* 줄바꿈 안하면, 크기가 줄어든다.(생략 가능) */
+				flex-wrap: nowrap;
+				
+				/* 줄바꿈 하면, 크기는 유지되고 줄바꿈 된다. */
+				flex-wrap: wrap;
+				
+				/* 기본축 변경과 줄바꿈 한번에 */
+				flex-flow: row wrap;
+			}
+			/* 섹션 안에있는 아티클 */
+			section article{
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<main>
+			<section>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+				<article></article>
+			</section>
+		</main>
+	
+	</body>
+</html>

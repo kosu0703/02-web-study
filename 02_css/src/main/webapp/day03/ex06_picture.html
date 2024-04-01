@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>picture 태그로 반응형 웹 이미지</title>
+	</head>
+	<body>
+		
+		<h2>화면 크기마다 이미지 변경하기</h2>		
+		<p>1000px 과 2000px 일때 변경하기</p>
+		<picture>
+			<source srcset="../images/bear.jpg" media="(max-width: 1000px)">
+			<source srcset="../images/rose.jpg" media="(max-width: 2000px)">
+			<source srcset="../images/car1.jpg">
+			<img src="../images/rose.jpg" style="width: auto;">	
+		</picture>
+		
+	</body>
+</html>

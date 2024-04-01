@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- 메타데이터 : 데이터에 대한 정보를 가지고 있는 것 -->
+		<meta charset="UTF-8">
+		<!-- 뷰포트 설정 -->
+		<!-- 너비를 장치의 너비 기준으로(device-width), 초기화면의 배율은 원본상태로 유지(1.0) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>반응형 웹</title>
+		<style type="text/css">
+			/* 웹브라우저, 디바이스 마다 기본 마진, 패딩이 다르므로, */
+			/* 초기화 시키고 시작하자 */
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			.outer{
+				/* 부모 outer 의 글자크기가 지정되면, 자식도 글자크기를 상속받는다. */
+				font-size: 24px;
+			}
+			.inner1{
+				/* 글자크기를 rem 으로 주면 root(html)의 크기를 참조 */
+				font-size: 2rem;	/* 16px * 2 */
+				
+				width: 200px;
+				height: 200px;
+				display: inline-block;
+				background-color: tomato;
+			}
+			.inner2{
+				/* 글자크기를 em 으로 주면 부모의 크기를 참조 */
+				/* 부모란 자신을 감싸고 있는 요소(태그) */
+				font-size: 2em;		/* 24px * 2 */
+				
+				width: 200px;
+				height: 200px;
+				display: inline-block;
+				background-color: tomato;
+			}
+			
+			/* rem 마진과 패딩 : root(html)의 글자 크기를 기준으로 지정 */
+			.inner1{
+				margin: 1rem;	/* 16px (즉, html 기본 글자 크기 기준) */
+				padding: 1rem;	
+			}
+			
+			/* em 마진과 패딩 : 자기 자신의 글자 크기를 기준으로 지정 */
+			.inner2{
+				margin: 1em;	/* 48px = 2em (즉, 자기자신의 글자 크기가 1em 이 된다.) */
+				padding: 1em;
+			}
+			
+			p{
+				/* p 태그는 기본 마진이 있어서, 마진을 없애고 시작 */
+				/* margin: 0px; */
+				
+				/* 화면의 너비 길이의 1/10 */
+				font-size: 10vw; 	
+				
+				/* 화면의 높이 길이의 1/10 */
+				font-size: 10vh;
+				
+				/* 화면의 크기에서 작은 것을 따라감 */
+				font-size: 10vmin;
+				
+				/* 화면의 크기를 조정하면 우상단에 화면의 크기가 보임 */
+			}
+		</style>
+	</head>
+	<body>
+<!-- 
+		1. 반응형 웹 디자인을 하기 위한 기본적으로 알아두어야 할 것이 뷰포트 이다.
+ 			뷰포트 설정을 해야 반응형 웹을 만들 수 있다.
+		
+			뷰포트를 설정하는 명령
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	
+ 		2. rem 과 em : 글자크기 지정
+ 			
+ 			1) rem : root(html)의 크기를 참조
+ 			2) em	: 부모의 크기를 참조
+ 
+ 		3. vw, vh, vmax, vmin
+ 			
+ 			1) vw : 화면 너비의 백분율
+ 			2) vh : 화면 높이의 백분율
+ 			3) vmax : 화면 크기의 너비와 높이 중 큰 것의 백분율 
+ 			4) vmin : 화면 크기의 너비와 높이 중 작은 것의 백분율
+ 				** 화면의 돌리거나, 화면을 늘리고 줄일때 사용
+ 		
+ 		
+ 		
+ -->	
+ 
+		<h1>Hello World</h1>
+		
+		<!-- outer 는 inner 의 부모 -->
+		<div class="outer">
+			<!-- 기본 글자 크기 : 16px (html 기준) -->
+			<div class="inner1">고양이</div>
+			<div class="inner2">강아지</div>
+			<!-- 고양이와 강아지는 형제 -->
+		</div>
+		
+		<p>한국ICT인재개발원</p>
+		
+		
+	
+	</body>
+</html>

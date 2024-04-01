@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02/21 과제</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			header{
+				width: 100%;
+				height: 120px;
+				color: white;
+				background-color: green;
+				padding: 20px;
+			}
+			.london{
+				width: 30%;
+				float: left;
+				padding: 20px;
+			}
+			.paris{
+				width: 30%;
+				float: left;
+				padding: 20px;
+			}
+			.tokyo{
+				width: 30%;
+				float: left;
+				padding: 20px;
+			}
+			@media screen and (max-width: 600px){
+				.london, .paris, .tokyo{
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+	
+		<header>
+			<h1>W3Schools Demo</h1>
+			<p>Resize this responsive page!</p>
+		</header>
+		
+		<div class="wrap">
+			<div class="london">
+				<h2>London</h2>
+				<p>London is the capital city of England.</p>
+				<br>
+				<p>It is the most populous city in 
+				the United Kingdom,
+				 with a metropolitan area of 
+				 over 13 milli
+				 on inhabitants.</p> 
+			</div>
+			<div class="paris">
+				<h2>Paris</h2>
+				<p>Paris is the capital of France.</p>
+				<br>
+				<p>The Paris area is one of the largest 
+				population centers in Europe, 
+				with more than 12 million inhabitants.</p> 
+			</div>
+			<div class="tokyo">
+				<h2>Tokyo</h2>
+				<p>Tokyo is the capital of Japan.</p>
+				<br>
+				<p>It is the center of the Grea
+				ter Tokyo Area, 
+				and the most populous metropolit
+				an area in the world.</p> 
+			</div>
+		</div>
+	
+	</body>
+</html>

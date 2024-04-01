@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>블록 레벨 요소, 인라인 요소</title>
+		<!-- 4. 스타일 태그에서 클래스를 사용하여 속성을 지정하자 -->
+		<style type="text/css">
+			/* 5. mycontainer 클래스 안에 있는 div 들 */
+			.mycontainer div{ 
+				/* 6. 옆으로 퍼지게 할때는 float 사용 */
+				 float: left; 
+				/* 7. 균등하게 너비 지정 */
+			 	width: 33%;
+			} 
+			/* 8. 클래스에 대해서만 */
+			.mycontainer {
+				width: 100%;
+				overflow: auto;
+			}
+			
+			/* display 사용 */
+			/* 클래스안 div 들한테 적용 */
+			.mycontainer2 div {
+				display: inline-block;	
+			}
+			
+			/* flex 사용 */
+			/* 클래스 자체에 적용 */
+			.mycontainer3 {
+				display: flex;
+			}
+			
+			/* grid 사용 */
+			.mycontainer4 {
+				display: grid;
+				grid-template-columns: 33% 33% 33%;	/* 2개만 주면 2개만 적용됨 */
+			}
+		</style>
+	</head>
+	<body>
+<!-- 
+		block level element : 항상 새로운 줄에서 시작하며, 한줄 전체 너비를 차지한다.
+			=> 태그에는 div , p , h1~g6 , table , form , ul , hr 등이 있다.
+			
+		inline element : 필요한 만큼만 너비를 차지한다.
+			=> 태그에는 span , input , button , label , img , a 등이 있다.
+
+		** 인라인 요소에는 블록 레벨 요소가 포함될 수 없다.
+ -->
+ 
+ 		<!-- div : 다른 요소(태그)들을 포함하는 컨테이너 역할을 한다. -->
+ 		<!-- 		또는 영역을 나누는 역할을 한다. -->
+ 		<div style="background-color: red;">Hello World</div>
+		<br>
+ 		
+ 		<!-- span : 인라인 -->
+ 		<span style="background-color: green;">Hello World</span>
+ 		<br>
+ 		<hr>
+ 		
+ 		<!-- div 는 영역의 범위를 지정할 수 있고, div 안에 있는 태그는 영역을 벗어날 수 없다. -->
+ 		<!-- **테이블처럼 사용할 수 있다. 여유공간이 있는 블록 레벨만 가능하다.-->
+ 		<div style="background-color: lightgray; width: 400px; margin: 0 auto;">
+ 			<h2>London</h2>
+	  		<p>London is the capital city of England.
+	  		London is the capital city of England.
+	  		London is the capital city of England.</p>
+	  		<p>London has over 13 million inhabitants.
+	  		London has over 13 million inhabitants.
+	  		London has over 13 million inhabitants.</p>
+ 		</div>
+ 		<br>
+ 		<hr>
+ 				
+ 		<!-- 옆으로 나열해보자 (횡배열) -->
+ 		
+ 		<!-- 1. div 로 div 를 감싸주자 -->
+ 		<!-- 2. div 에 class 이름을 지정하자 -->
+ 		<!-- 3. 올라가서 head 부분에서 적용 -->
+ 		
+ 		<!-- float 사용 -->
+ 		<div class="mycontainer">
+	 		<div style="background-color:#FFF4A3;">
+			  <h2>London</h2>
+			  <p>London is the capital city of England.</p>
+			  <p>London has over 13 million inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#FFC0C7;">
+			  <h2>Oslo</h2>
+			  <p>Oslo is the capital city of Norway.</p>
+			  <p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#D9EEE1;">
+			  <h2>Rome</h2>
+			  <p>Rome is the capital city of Italy.</p>
+			  <p>Rome has almost 3 million inhabitants.</p>
+			</div>
+ 		</div>		
+ 		<br>
+ 		<hr>
+ 		
+ 		<!-- display 사용 -->
+ 		<div class="mycontainer2">
+	 		<div style="background-color:#FFF4A3;">
+			  <h2>London</h2>
+			  <p>London is the capital city of England.</p>
+			  <p>London has over 13 million inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#FFC0C7;">
+			  <h2>Oslo</h2>
+			  <p>Oslo is the capital city of Norway.</p>
+			  <p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#D9EEE1;">
+			  <h2>Rome</h2>
+			  <p>Rome is the capital city of Italy.</p>
+			  <p>Rome has almost 3 million inhabitants.</p>
+			</div>
+ 		</div>	
+ 		<br>
+ 		<hr>
+ 		
+ 		<!-- flex 사용 -->
+ 		<div class="mycontainer3">
+	 		<div style="background-color:#FFF4A3;">
+			  <h2>London</h2>
+			  <p>London is the capital city of England.</p>
+			  <p>London has over 13 million inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#FFC0C7;">
+			  <h2>Oslo</h2>
+			  <p>Oslo is the capital city of Norway.</p>
+			  <p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#D9EEE1;">
+			  <h2>Rome</h2>
+			  <p>Rome is the capital city of Italy.</p>
+			  <p>Rome has almost 3 million inhabitants.</p>
+			</div>
+ 		</div>		
+ 		<br>
+ 		<hr>
+ 		
+ 		<!-- grid 사용 -->
+ 		<div class="mycontainer4">
+	 		<div style="background-color:#FFF4A3;">
+			  <h2>London</h2>
+			  <p>London is the capital city of England.</p>
+			  <p>London has over 13 million inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#FFC0C7;">
+			  <h2>Oslo</h2>
+			  <p>Oslo is the capital city of Norway.</p>
+			  <p>Oslo has over 600.000 inhabitants.</p>
+			</div>
+			
+			<div style="background-color:#D9EEE1;">
+			  <h2>Rome</h2>
+			  <p>Rome is the capital city of Italy.</p>
+			  <p>Rome has almost 3 million inhabitants.</p>
+			</div>
+ 		</div>		
+ 		<br>
+ 		<hr>
+ 		
+	</body>
+</html>

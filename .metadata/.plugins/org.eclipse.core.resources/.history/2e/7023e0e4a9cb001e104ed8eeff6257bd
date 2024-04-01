@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>연습문제</title>
+		<style type="text/css">
+			table {width: 60%; border: gray solid 3px}	/* 바깥에만 테두리가 지정된다. */
+			table, th, td {border: black 2px solid;
+			}
+			
+			/* 글자 가운데 정렬 */
+			td {text-align: center;}
+			
+			/* 테이블 자체를 가운데 정렬 => 일단 너비가 있어야 된다. */	
+			table {margin: 0px auto;}	/* 0 은 상하 , auto 는 좌우 */
+			
+			/* 테이블 칸의 너비 지정 */
+			
+			
+			td:nth-child() {
+				padding: 10px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<table>
+			<caption style="font-size: 33px; font-weight: bold;">수습 국원 지원 양식</caption>
+			<tbody>
+				<tr><td rowspan="3">개인정보</td><td>이름</td><td colspan="2">          </td></tr>
+				<tr><td>학과/학번</td><td colspan="2">           </td></tr>
+				<tr><td>연락처</td><td colspan="2">          </td></tr>
+				<tr><td>지원분야</td><td colspan="3">         </td></tr>
+			</tbody>			
+		</table>
+	</body>
+</html>

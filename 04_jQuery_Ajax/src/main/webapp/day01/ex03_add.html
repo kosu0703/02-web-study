@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>add 클래스</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<style type="text/css">
+			
+			.fg_red{color: red;}
+			.fg_white{color: white;}
+			
+			.bg_red{background-color: red;}
+			.bg_yellow{background-color: yellow;}
+			
+			div{background-color: green;}
+			
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//	p 요소의 첫번째와 마지막 요소 선택
+				//	클래스에 여러개가 들어갈 수 있다.
+				
+				/* 방법1 */
+				//$("p").first().addClass("bg_yellow fg_red");
+				//$("p").last().addClass("bg_red fg_white");
+				
+				/* 방법2 */
+				$("p:first").addClass("bg_yellow fg_red");
+				$("p:last").addClass("bg_red fg_white");
+				
+				//	div 요소의 홀수와 짝수 (index 0부터 시작)
+				$("div:odd").addClass("fg_white");
+				$("div:even").addClass("fg_red");
+			});
+		</script>
+		
+	</head>
+	<body>
+
+		<p>Hello-1</p>
+		<p class="bg_yellow fg_white">Hello-2</p>
+		<p>Hello-3</p>
+		<br>
+		<div>div-1</div>
+		<div>div-2</div>
+		<div>div-3</div>
+		<div>div-4</div>
+		<div>div-5</div>
+
+	</body>
+</html>

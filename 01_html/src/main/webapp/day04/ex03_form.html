@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>세번째 폼</title>
+		<style type="text/css">
+			#container{
+				width: 600px;
+				margin: 0 auto;
+			}
+			fieldset { padding: 15px; }
+			legend { font-weight: bold; }
+			ul{ 
+				list-style-type: none; 
+				padding-left: 0px;
+			}
+			li{ margin: 10px; }
+			li label { width: 120px; float: left; text-align: left; }
+			
+			/* 인풋 안에서 타입이 텍스트인 것만 너비를 늘리고 싶다. */
+			input[type="text"] {width: 300px; padding: 5px;}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 가운데 정렬을 위해 div 로 감싼다. -->
+		<div id="container">
+		<h1>레드향 주문하기</h1>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>배송 정보</legend>
+				<ul>
+					<li>
+						<label for="uname">이름</label>
+						<input type="text" id="uname" name="uname">
+					</li>			
+					<li>
+						<label for="addr">배송 주소</label>
+						<input type="text" id="addr" name="addr">
+					</li>			
+					<li>
+						<label for="mail">이메일</label>
+						<input type="text" id="mail" name="mail" >
+					</li>			
+					<li>
+						<label for="phone">연락처</label>
+						<input type="text" id="phone" name="phone">
+					</li>		
+					<li>
+						<label for="d_day">배송지정</label>			<!-- 글자크기 한단계 작게 -->
+						<input type="date" id="d_day" name="d_day"> <small>(주문일로 부터 최소 3일 이후)</small>
+					</li>		
+					<li>
+						<label for="memo">메모</label>
+						<textarea id="memo" rows="4" cols="42"></textarea>
+					</li>		
+				</ul>
+			</fieldset>
+			<input type="submit" value="가입하기">
+			<input type="reset" value="취소">
+		</form>
+		</div>
+		
+	</body>
+</html>

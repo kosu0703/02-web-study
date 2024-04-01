@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>디스플레이 속성</title>
+		<style type="text/css">
+			#d1 p{ border: 1px solid red; }
+			#d1 span{ border: 1px dashed blue; display: inline-block; width: 300px; }
+			
+			/* 연습문제 p123 */
+			#d2 p{ border: 1px solid green; height: 100px; }
+			#d2 strong, em{ border: 1px solid magenta; height: 50px; display: block; }
+		</style>
+	</head>
+	<body>
+<!-- 
+		display : inline		=> 인라인으로 처리 
+				  block			=> 블록 레벨으로 처리
+				  inline-block	=> 배치는 인라인으로 처리, 속성은 블록 레벨으로 처리(너비, 높이)
+				  none			=> 표시하지 않는다.(정보가 사라지는 것이 아니라 숨기는 것이다.)
+ -->	
+		<div id="d1">
+			<p>여기는 블록 레벨 입니다.</p>
+			<span>여기는 인라인 입니다.</span>
+		</div>
+		<hr>
+		<!-- 연습문제 p123 -->
+		<div id="d2">
+			<p>블록 요소 태그는 자동 줄 바꿈 됩니다.</p>
+			<p>
+				<span><strong>인라인 요소 태그</strong>들은 <em>좌우로</em> 배치됩니다.</span>
+			</p>
+		</div>
+		
+	</body>
+</html>

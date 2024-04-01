@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>포지션 relative 와 absolute</title>
+		<style type="text/css">
+			/* 초기화 */
+			*{ margin: 0px; padding: 0px; }
+		
+			.wrap{
+				width: 800px;
+				border: 5px solid black;
+				margin: 50px auto;
+			}
+			.left{
+				width: 400px;
+				height: 400px;
+				background-color: lightgreen;
+				float: left;
+			}
+			.right{
+				width: 400px;
+				height: 400px;
+				background-color: lightblue;
+				float: left;
+				position: relative;	/* 부모의 포지션이 지정되면 box 는 부모 right 에 맞춰서 이동 */
+			}
+			.bottom{
+				clear: both;	/* float 해제 */
+				width: 800px;
+				height: 100px;
+				background-color: pink;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;		/* 부모의 포지션이 없어서 body 를 기준으로 이동 */
+				right: 20px;			/* 화면의 오른쪽에서 20px 만큼 */
+				bottom: 30px;			/* 화면의 바닥에서 30px 만큼 */
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div class="wrap">
+			<div class="left"></div>
+			<div class="right">
+				<p class="box"></p>
+			</div>
+			<div class="bottom"></div>
+		</div>
+		
+	</body>
+</html>

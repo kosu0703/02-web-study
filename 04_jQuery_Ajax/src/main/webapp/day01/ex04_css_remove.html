@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>.css , add 클래스 , remove 클래스 , toggle 클래스</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<style type="text/css">
+			
+			.important{font-weight: bold;}
+			.blue{color: blue;}
+			.bg_tomato{background-color: tomato;}
+			div{
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+			}
+		
+		</style>
+		
+		<script type="text/javascript">
+			
+			$(function() {
+				//	CSS 적용
+				//	$("선택자").addClass("클래스명");		=> 특정 요소에 스타일 클래스 추가
+				//	$("선택자").removeClass("클래스명");	=> 특정 요소에 스타일 클래스 삭제
+				//	$("선택자").toggleClass("클래스명");	=> 특정 요소에 스타일 클래스 추가/삭제 번갈아가면서
+				
+				//	$("선택자").css("스타일 속성", "값");	=> 특정 요소에 스타일 속성을 적용
+				//	$("선택자").attr("태그 속성", "값");	=> 특정 요소에 태그 속성 attribute 적용
+				
+				$("#btn1").click(function() {
+					$("h1, h2").addClass("blue");
+					$("p").addClass("bg_tomato");
+					$("div").addClass("bg_tomato blue important")
+				});
+				$("#btn2").click(function() {
+					$("h1, h2").removeClass("blue");
+					$("p").removeClass("bg_tomato");
+					$("div").removeClass("bg_tomato blue important")
+				});
+				$("#btn3").click(function() {
+					$("h1, h2").toggleClass("blue");
+					$("p").toggleClass("bg_tomato");
+					$("div").toggleClass("bg_tomato blue important")
+				});
+				$("#btn4").click(function() {
+					$("h1, h2").css("color", "blue");
+					//	여러개 스타일을 줄 경우 .css 를 붙이자
+					$("p").css("backgroundColor", "tomato").css("color", "blue");
+					//	css 는 {} 블록 안에 세미콜론 : 을 사용해서 스타일을 줄 수 있다.
+					$("div").css({"backgroundColor":"yellow", "width":"200px"});
+				});
+				
+			});
+							
+		</script>
+
+	</head>
+	<body>
+		
+		<h1>이것은 h1 태그 입니다.</h1>		
+		<h2>이것은 h2 태그 입니다.</h2>
+		<p>이것은 문단-1 p 태그 입니다.</p>
+		<p>이것은 문단-2 p 태그 입니다.</p>
+		<p>이것은 문단-3 p 태그 입니다.</p>
+		<div>이것은 영역 div 태그 입니다.</div>
+		<hr>
+		<button id="btn1">addClass</button>
+		<button id="btn2">removeClass</button>
+		<button id="btn3">toggleClass</button>
+		<button id="btn4">css</button>
+	
+	</body>
+</html>

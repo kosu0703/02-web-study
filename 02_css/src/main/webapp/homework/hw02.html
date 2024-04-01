@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02/20 과제2</title>
+		<style type="text/css">
+			*{
+				margin: 0px;	/* 바깥쪽 여백 0px */
+				padding: 0px;	/* 안쪽 여백 0px */
+			}
+			#all, #header, #footer, #left, #content, #right{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			#all{
+				width: 1200px;
+				margin: 30px;	
+			}
+			/* header 부분 설정 */
+			#header{
+				height: 120px;
+				background-color: lightgray; /* 배경색 */
+				padding: 50px 0px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			/* footer 부분 설정 */
+			#footer{
+				height: 100px;
+				background-color: lightgray; 
+				clear:both;			/* float 해제 */
+				padding: 40px 0px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			/* 왼쪽 부분 설정 */
+			#left{
+				width: 250px;		
+				height: 600px;	
+				float: left;	/* 좌우로 배치 */
+				padding: 290px 0px;
+				text-align: center;
+				background-color: skyblue;
+				box-sizing: border-box;
+			}
+			/* 본문 부분 설정 */
+			#content{
+				width: 800px;		
+				height: 600px;	
+				float: left;	/* 옆으로 나열 */
+				padding: 290px 0px;
+				text-align: center;
+				box-sizing: border-box;
+			}
+			#right{
+				width: 150px;		
+				height: 600px;	
+				float: left;	/* 좌우로 배치 */
+				padding: 290px 0px;
+				text-align: center;
+				background-color: skyblue;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="all">
+			<div id="header">
+				<p>헤더</p>
+			</div>
+			
+			<div id="left">
+				<p>사이드 바</p>
+			</div>
+			
+			<div id="content">
+				<p>본문</p>
+			</div>
+			
+			<div id="right">
+				<p>사이드 바</p>
+			</div>
+		
+			<div id="footer">
+				<p>푸터</p>
+			</div>
+		</div>
+	
+	</body>
+</html>

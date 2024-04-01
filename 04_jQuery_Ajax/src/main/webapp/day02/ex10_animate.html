@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션</title>
+		<style type="text/css">
+			img{
+				position: absolute;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				//	대각선 이동
+				//	왼쪽에서 멀어지고 위에서 멀어진다
+				$("#btn").click(function() {
+					$("img").animate({
+						left: "+=800px",
+						top: "+=800px"
+					}, 8000);
+				});
+				
+				//	애니메이션 종료 => stop()
+				$("img").click(function() {
+					$(this).stop();
+				})
+				
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<button id="btn">대각선 이동</button>
+		<hr>
+		<div>
+			<img alt="" src="../images/img03.jpg">
+		</div>
+			
+	</body>
+</html>

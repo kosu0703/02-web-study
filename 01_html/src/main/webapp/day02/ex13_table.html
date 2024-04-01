@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블 합치기</title>
+		<style type="text/css">
+			table {background-color: tomato;}	/* 합치기하면 전체 색깔을 줘야함 */
+			table {width: 60%; border: gray solid 3px;}	/* 바깥에만 테두리가 지정된다. */
+			table, th, td {border: black 2px solid;
+			/* 테두리선 한줄로 만들기 */
+			border-collapse: collapse;}
+			
+			/* 글자 가운데 정렬 */
+			td {text-align: center;}
+			
+			/* 테이블 자체를 가운데 정렬 => 일단 너비가 있어야 된다. */	
+			table {margin: 0px auto;}	/* 0 은 상하 , auto 는 좌우 */
+			
+			/* 테이블 칸의 너비 지정 */
+			th, td {padding: 10px;}
+			
+		</style>
+	</head>
+	<body>
+<!-- 
+		**caption 태그는 표의 설명 또는 제목을 나타내고, 보통은 위에 존재한다.
+			(만약에 아래에 넣고 싶으면, style 에서 caption-side:bottom; 을 주면 된다.)
+
+		행 합치기 : rowspan = " 합쳐진 td 갯수 ", 위아래로 합치기, 맨 위에서 합치기 (행과 행을 합치기)
+		
+		열 합치기 : colspan = " 합쳐진 td 갯수 ", 좌우로 합치기, 맨 왼쪽에서 합치기 (열과 열을 합치기)
+		
+		** 맨위, 맨왼쪽 에서 합치고 나머지는 지운다.
+ -->
+ 
+ 		<table>
+ 			<!-- 테이블 위에 제목을 넣고싶다. => ** caption 태그 사용 -->
+ 			<caption style="font-size: 33px; font-weight: bold;">인재 개발원 숙소</caption>
+ 			<thead>
+ 				<tr style="background-color: gray;"><th>방이름</th><th>대상</th><th>크기</th><th>가격</th></tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr><td>유채방</td><td>여성</td><td rowspan="3">4인실</td><td rowspan="4">1인 20,000원</td></tr>
+ 				<tr><td rowspan="2">동백방</td><td>동성</td></tr>
+ 				<tr><td>가족</td></tr>
+ 				<tr><td>천혜향방</td><td>누구나</td><td>2인실</td></tr>
+ 			</tbody>
+ 			<tfoot>
+ 				<tr><td colspan="4">3세까지는 무료</td></tr>
+ 			</tfoot>
+			<!-- 아래에 넣어도 테이블 위에 표시된다. --> 			
+ 			<!-- <caption>인재 개발원 숙소</caption> -->
+ 		</table>
+ 		
+ 		<hr>
+ 		
+ 		<table>
+ 			<thead>
+ 				<tr><th colspan="3">2022</th></tr>
+ 			</thead>
+ 			<tbody>
+ 				<tr><td>1</td><td>2</td><td>3</td></tr>
+ 				<tr><td rowspan="2" colspan="2">4</td><td>6</td></tr>
+ 				<tr><td>9</td></tr>
+ 				<tr><td>10</td><td>11</td><td>12</td></tr>
+ 			</tbody>
+ 		</table>
+ 		
+	</body>
+</html>

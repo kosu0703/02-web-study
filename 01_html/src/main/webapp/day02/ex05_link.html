@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Link : a 태그</title>
+	</head>
+	<body>
+<!-- 
+		link => 위치이동 / 페이지간의 이동
+		
+		a : 링크 태그
+		
+		< a href = "url" target = "value" > 텍스트 </a>
+		
+			- href : 이동할 페이지나 사이트의 주소
+					(**만약에 # 이면 현재문서를 뜻한다.)
+			
+			- target : "_blank"		**(새창)
+					   "_self" 		(자기자신, default)
+					   "_parent"	(부모창)
+					   "name" 		**(같은 페이지에 name 을 지정한 위치)
+ -->
+ 
+ 		<!-- a 태그는 인라인 레벨이다. -->
+ 		<!-- 현재창이 바뀐다. (즉, target 을 안쓰면 자기자신이 default) -->
+ 		<a href="https://www.naver.com">naver</a>
+ 		<a href="https://www.daum.net">daum</a>
+ 		<a href="https://www.google.com">google</a>
+ 		<hr>
+ 		
+ 		<!-- target 에 _blank 를 사용하면 새창에 열린다. -->
+ 		<a href="https://www.naver.com" target="_blank">naver</a>
+ 		<a href="https://www.daum.net" target="_blank">daum</a>
+ 		<a href="https://www.google.com" target="_blank">google</a>
+ 		<hr>
+ 		
+ 		<!-- 문서연결 -->
+ 		
+ 		<!-- 상대주소 : 자기위치에서 시작 -->
+ 			<!-- 현재위치에서 보이면 (즉, 형제면) 파일명을 그대로 적어준다. -->
+ 		<a href="ex03_color.html" target="_blank">문서1-1</a>
+ 			<!-- 다른 폴더에 있으면 .. 으로 빠져나가고 경로를 적어준다.  -->
+ 		<a href="../day01/ex04_style.html" target="_blank">문서1-1</a>
+ 		
+ 		<!-- 절대주소 : 슬래시 / 부터 시작 -->
+ 		<a href="/html/day02/ex01_formatting.html" target="_blank">문서2</a>
+ 		<hr>
+ 		
+ 		<h2>같은 문서에서 다른 위치로 이동하기(name, target 이용)</h2>
+ 		<p><a href="#first">첫번째 섹터</a></p>
+ 		<p><a href="#second">두번째 섹터</a></p>
+ 		<p><a href="#third">세번째 섹터</a></p>
+ 		<br><br><br><br><br><br><br><br>
+ 		<a name="first">첫번째 단락</a>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+ 		
+ 		<a name="second">두번째 단락</a>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+ 		
+ 		<a name="third">세번째 단락</a>
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 		
+		<p>.</p><p>.</p><p>.</p><p>.</p><p>.</p> 
+		
+		<a href="#">해당 페이지 맨 위로 이동 (# 사용)</a>		
+ 
+	</body>
+</html>

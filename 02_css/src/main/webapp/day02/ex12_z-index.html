@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>겹쳐있는 요소의 z축 순서 지정</title>
+		<style type="text/css">
+			.wrap{
+				width: 400px;
+				height: 400px;
+				border: 1px solid black;
+				margin: 100px auto;
+				position: relative;
+			}
+			/* 원래는 wrap 기준으로 만들어지는 순서대로 겹쳐진다 */
+			.left{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				z-index: 2;		/* z축 우선순위를 주면 순서가 정해진다. */
+				opacity: 0.7;	/* 위에 있는 애한테 투명도를 주면 아래에 깔린게 보인다. */
+				/* 0 => 완전한 투명, 1 => 완전한 불투명 */
+				/* 즉, 투명도가 0 이면 사라진다. */
+			}
+			.right{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: absolute;
+				bottom: 50px;
+				right: 50px;
+				z-index: 1;		/* z축 우선순위가 낮은 1이 아래에 깔리게 된다. */
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="wrap">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+	
+	</body>
+</html>

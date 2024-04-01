@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Image Map</title>
+	</head>
+	<body>
+<!-- 
+		이미지 맵 : 하나의 이미지 안에서 여러개의 다른 이미지 a 링크를 설정하는 것
+				사각형(rect), 원형(circle) 의 영역을 설정
+				
+			사용방법
+				1. img 태그 안에 usemap 으로 맵 이름 지정
+				2. 나와서 map 태그 name 에 지정한 이름 넣기
+				3. area 태그로 범위 지정 ( shape 모양, coords 위치 , href 주소 )
+					- 사각형 : 시작 x , 시작 y , 끝 x , 끝 y 
+					- 원형 : 원의 중심 x , 원의 중심 y , 원의 반지름
+							
+					** 위치찾기 : 그림판 - 보기 - 눈금자 
+ -->
+ 	
+ 		<a href="http://www.naver.com">
+ 			<img alt="작업화면" src="../images/img04.jpg" usemap="#i_map">
+ 		</a>
+ 		<map name="i_map">
+ 			<!-- 영역설정 : 사각형 ( 시작 x,y 좌표 , 끝 x,y 좌표 ) -->
+ 			<area alt="" shape="rect" coords="36,43,273,344" href="https://www.google.com">
+ 			<!-- 영역설정 : 원형 ( 원의 중심 x,y 좌표 , 반지름 ) -->
+ 			<area alt="" shape="circle" coords="339,294,45" href="https://www.daum.net">
+ 		</map>
+ 		
+	</body>
+</html>

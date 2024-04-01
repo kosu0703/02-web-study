@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>블록 레벨, 인라인 레벨</title>
+	</head>
+	<body>
+<!-- 
+		block level element : 항상 새로운 줄에서 시작하며, 한줄 전체 너비를 차지한다.
+			
+			태그에는 div , p , h1~g6 , table , form , ul , hr 등이 있다.
+
+ -->
+	</body>
+</html>

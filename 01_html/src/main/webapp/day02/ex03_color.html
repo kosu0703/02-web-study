@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>색상 : Color</title>
+	</head>
+	<body>
+<!-- 
+		1. color names : 색상 이름을 사용해서 색상 지정
+			( https://www.w3schools.com/colors/colors_names.asp )
+			
+		2. style 속성 => 배경색, 글자색, **테두리색(선두께, 선종류, 선색상을 같이 사용)
+ -->		
+ 		<p>이것은 배경색, 글자색, 테두리색을 지정하는 색상 표현이다.</p>
+ 		<p style="background-color: aqua;">이것은 배경색 background-color 을 지정하는 색상 표현이다.</p>
+ 		<p style="color: aqua;">이것은 글자색 color 을 지정하는 색상 표현이다.</p>
+ 		<p style="border: red 2px;">이것은 테두리색을 지정하는 색상 표현이다.(변화 없음)</p>
+ 		<p style="border: red solid;">이것은 테두리색(선종류) 실선 solid 을 지정하는 색상 표현이다.</p>
+ 		<p>이것은 배경색, 글자색, 테두리색을 지정하는 색상 표현이다.</p>
+ 		<p style="border: red solid 2px;">이것은 테두리색(선두께) 실선의 두께를 지정하는 색상 표현이다.</p>
+ 		<p>이것은 배경색, 글자색, 테두리색을 지정하는 색상 표현이다.</p>
+ 		<p style="border: red dotted 2px;">이것은 테두리색(선종류) 점선 dotted 을 지정하는 색상 표현이다.</p>
+ 		<p>이것은 배경색, 글자색, 테두리색을 지정하는 색상 표현이다.</p>
+ 		<p style="border: red dashed 2px;">이것은 테두리색(선종류) 박음질선 dashed 을 지정하는 색상 표현이다.</p>
+ 		<p>이것은 배경색, 글자색, 테두리색을 지정하는 색상 표현이다.</p>
+ 		<p style="border: red double 5px;">이것은 테두리색(선종류) 이중실선 double 을 지정하는 색상 표현이다.</p>
+ 		<hr>
+ <!-- 
+ 		3. RGB
+ 			rgb(red, green, blue) / rgb(red, green, blue, alpha(투명도))
+ 			각 자리에 가중치 0-255 숫자로 표현, 투명도 0.0~1.0
+  -->
+ 		<p style="background-color: rgb(255,0,0)">이것은 RGB 색상 표현이다.</p>
+ 		<p>이것은 RGB 색상 표현이다.</p>
+ 		<p style="background-color: rgb(255,255,0)">이것은 RGB 색상 표현이다.</p>
+ 		<p>이것은 RGB 색상 표현이다.</p>
+ 		<p style="background-color: rgb(255,0,0,0)">이것은 RGBA 투명도 0 인 색상 표현이다.</p>
+ 		<p>이것은 RGB 색상 표현이다.</p>
+ 		<p style="background-color: rgb(255,0,0,0.5)">이것은 RGBA 투명도 0.5 인 색상 표현이다.</p>
+ 		<p>이것은 RGB 색상 표현이다.</p>
+ 		<p style="background-color: rgb(255,0,0,1.0)">이것은 RGBA 투명도 1.0 인 색상 표현이다.</p>
+ 		<p>이것은 RGB 색상 표현이다.</p>
+ 		<hr>
+ 		
+ <!-- 
+ 		4. HEX
+ 			#rrggbb / #rrggbbaa (투명도)
+ 			각 자리에 가중치 16진수 (0~9,a,b,c,d,e,f) 로 표현
+  -->		
+ 		<p style="background-color: #ffff00">이것은 HEX 색상 표현이다.</p>
+ 		<p>이것은 HEX 색상 표현이다.</p>
+ 		<p style="background-color: #0000ff">이것은 HEX 색상 표현이다.</p>
+ 		<p>이것은 HEX 색상 표현이다.</p>
+ 		<p style="background-color: #ffff0000">이것은 HEX 투명도 00 인 색상 표현이다.</p>
+ 		<p>이것은 HEX 색상 표현이다.</p>
+ 		<p style="background-color: #ffff0088">이것은 HEX 투명도 88 인 색상 표현이다.</p>
+ 		<p>이것은 HEX 색상 표현이다.</p>
+ 		<p style="background-color: #ffff00ff">이것은 HEX 투명도 ff 인 색상 표현이다.</p>
+ 		<p>이것은 HEX 색상 표현이다.</p>
+ 		
+	</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Form</title>
+	</head>
+	<body>
+<!-- 
+		폼 form : 사용자의 요구사항을 받을 수 있는 곳
+			사용자들에게 정보를 입력받아 서버에게 정보를 전달하는 역할을 한다.
+	
+			** 무조건 form 을 이용하여 정보를 받자
+			
+		<form [action=""][method=""][enctype=""]>
+			form elements(폼 요소들)
+		</form>
+		
+			1. action : 정보가 전달되는 페이지 경로(즉, 서버 경로)
+			
+			2. method : 정보를 전달하는 방식
+				- get(생략) : 정보를 head 에 담아서 보낸다.
+							적은 용량, 주소창에 보인다.
+							보안이 취약, 속도는 빠름
+							ex) 검색(네이버, 구글)
+							 
+				- post : 정보를 body 에 담아서 보낸다.
+						대용량 가능, 주소창에 안보인다.
+						보안이 높음, get 보다는 느림
+						
+			3. enctype : 평소에는 사용할 일 없음
+						업로드할 때만 사용
+						
+			4. form elements 태그들 
+				=> **input, label, select, textarea, fieldset, legend 등
+			
+			5. input 태그의 type 속성값들
+				=> text, button, radio, checkbox, file, hidden, number,
+					password, reset, submit, tel, color, date, email,
+					time, url, week, range, search 등
+					
+				- name 속성은 데이터 전달할때 사용되는 name 이다.
+				- value 속성은 데이터 전달할때 사용되는 value 이다. 
+				
+				** 데이터가 전달될때 ( 주소 ? name=value & name=value & name=value ...)
+					이름=값 , 이름=값 , 이름=값 ...
+					
+				** checkbox, select 인 경우 같은 이름이 여러개 지정될 경우가 있다.
+											이때 서버에서는 배열로 담는다.
+					
+				** checkbox, radio 인 경우 checked 라는 속성은 선택되었다는 뜻이다.
+				
+				** select 에서 selected 속성을 지정하면 선택되었다는 뜻으로 
+							option 태그와 함께 사용
+							size 는 화면에 표시되는 개수
+							multiple 속성은 ctrl 키를 이용하면 동시에 여러개 선택 가능
+
+				** reset 속성은 form 태그 안에 입력한 정보를 초기화 한다.(버튼 형태)
+				
+				** submit 속성은 form 태그 정보를 action 이 지정한 페이지로 정보를 전달한다.(버튼 형태)
+				
+					** reset, submit 의 value 는 서버에 전달되는 것이 아니라 버튼에 새겨지는 글자					
+	
+				** input type = "text" 
+						disabled : 커서가 들어가지 않아서 입력할 수 없다.
+						readonly : 오직 읽기만 가능, 수정 안됨
+						placeholder : 힌트 표시
+						required : 반드시 입력해야 되는 태그에 붙이는 속성
+						pattern : [0-9(숫자만)]{3(자릿수)}
+								  [A-Za-z(알파벳만)]
+								  
+						=> 서버로 넘어가기전 프론트 단에서 먼저 걸어내 주는 것 (서버 부하 방지) 
+
+				** javascript 전까지는 submit 속성을 이용해서 서버에 정보를 전달
+					javascript 에서는 input type=button 속성에 onclick 을 이용해서
+									javascript 함수를 호출하여 전달할 수 있다.
+									
+									
+ -->
+
+ 		<form action="ex01_form.html" method="get">
+			<p>
+				아이디 : 
+				<!-- input 타입의 텍스트는 한줄 입력받고, 입력한 정보가 value 가 된다. -->			
+				<input type="text" name="id" maxlength="10" placeholder="아이디를 입력하세요" 
+				required>
+				<!-- required 는 반드시 입력해야 한다. -->
+			</p>
+			<p>
+				<label>패스워드 : </label>
+				<!-- 인풋타입에 password 를 설정하면 입력한 내용 대신 ● 점으로 표시된다. -->
+				<input type="password" name="pw" maxlength="10" placeholder="패스워드를 입력하세요"
+				readonly>
+				<!-- readonly : 커서는 들어가지만 읽기만 가능, 서버에는 value 값이 넘어간다. -->
+			</p>
+			<p>
+				<!-- 라벨의 for 와 인풋타입의 id 가 같으면 연결된다. -->
+				<!-- 즉, 라벨만 선택해도 인풋으로 커서가 넘어간다. -->
+				<label for="username">이름 : </label>
+				<input type="text" id="username" name="username" maxlength="10" 
+				placeholder="이름을 입력하세요" disabled>
+						<!-- disabled : 커서도 안들어가고 보이기만 함, 서버에도 안넘어가진다.(비활성화) -->
+			</p>
+			<p>
+				<label for="userage">나이 : </label>
+									<!-- 숫자는 일반 maxlength 를 사용할 수 없다. -->
+									<!-- 최솟값, 최댓값을 사용하자 min, max  -->
+				<input type="number" id="userage" name="userage" min="0" max="150">
+									<!-- maxlength 는 최대 자릿수이하여도 가능하지만 -->
+			</p>
+			<p>
+				<label for="birth">생년월일 : </label>
+				<input type="text" id="birth" name="birth" pattern="[0-9]{6}">
+									<!-- patten 은 숫자형식과 자릿수도 맞춰야 넘어간다. -->
+			</p>
+			<p>
+				성별 : 					<!-- checked : 남자가 기본으로 선택되어 있도록 기본값 -->
+				<input type="radio" name="gender" value="1" checked> 남자
+				<input type="radio" name="gender" value="2"> 여자
+				<!-- 남성이든 1이든 파라미터는 일단 문자열로 넘어간다. -->
+			</p>
+			<p>
+				취미 : 
+				<input type="checkbox" name="hobby" value="1"> 운동
+				<input type="checkbox" name="hobby" value="2"> 게임
+				<input type="checkbox" name="hobby" value="3"> 영화
+				<input type="checkbox" name="hobby" value="4"> 독서
+				<!-- 여러개를 받으면 서버에는 hobby[] 배열로 넘어간다. for문 사용 -->
+			</p>
+			<p>
+				주소 : 						
+				<select name="addr">
+					<option>::선택하세요::</option>
+					<!-- value 를 입력하지 않으면 텍스트가 value 가 된다. -->
+					<!-- value 를 입력하면 value 값이 넘어간다. -->
+					<option value="1">서울</option>
+					<option value="2">경기</option>
+					<option value="3">제주</option>
+					<option value="4">해외</option>
+				</select>
+			</p>
+			<p>
+				웹 브라우저 : 						
+				<select name="browser" multiple size="6">
+				<!-- multiple : ctrl 하고 여러개 선택가능 -->
+				<!-- 기본 4개까지 보여주는데 size 지정할 수 있음 -->
+					<option>::선택하세요::</option>
+					<option value="1">크롬</option>
+					<option value="2">사파리</option>
+					<option value="3">파이어폭스</option>
+					<option value="4">엣지</option>
+					<option value="5">오페라</option>
+				</select>
+			</p>
+			<!-- 인풋타입이 file 인 경우 form 속성 enctype 을 사용해야된다.(나중에) -->
+			<p>파일 : <input type="file" name="file"></p>
+			<p>날짜 : <input type="date" name="regdate"></p>
+			
+			<p>시간 : <input type="time" name="time"></p>
+			<p>컬러 : <input type="color" name="coler"></p>
+			<p>범위 : <input type="range" name="range"></p>
+			
+			<p>자기소개서<br>
+				<textarea rows="5" cols="30" name="self"></textarea>
+			</p>
+			<!-- 우리는 나중에 에디터라는 놈을 쓸거다. -->
+			<!-- 메일이나 자기소개서 같이 긴글을 사용할때 에디터 라이브러리를 가져다가 사용한다. -->
+			
+			<p><input type="reset" value="취소"></p>
+			<p><input type="submit" value="보내기"></p>
+			<!-- 보내기를 누르면 get 방식이라 주소창 주소 뒤에 보인다.-->
+			<!-- ?id=kosu0703&pw=asdf123456&username=고예찬 -->
+			<!-- post 방식으로 바꾸면 주소창에 안보인다. -->
+ 		</form>
+ 		
+ 		
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>넘치는 내용 제어</title>
+		<style type="text/css">
+			#box1, #box2, #box3, #box4{
+				width: 250px;
+				height: 100px;
+				border: 1px solid gray;
+			}
+			#box1{ overflow: visible; }
+			#box2{ overflow: hidden; }
+			#box3{ overflow: scroll; }
+			#box4{ overflow: auto; }
+		</style>
+	</head>
+	<body>
+<!-- 
+		overflow : 너무 커서 영역에 맞지 않는 내용을 제어할때 사용
+		
+			1) visible : 기본값, 내용은 요소상자 외부에서도 보인다.
+			
+			**2) hidden : 넘치는 내용이 보이지 않는다.
+			
+			3) scroll : 넘치면 스크롤이 추가된다.
+			
+			4) auto : 필요할때 스크롤이 추가된다.
+ -->		
+	
+		<h2>css-overflow</h2>
+		<p>css overflow test css overflow test css overflow test 
+		css overflow test css overflow test css overflow test </p>
+		
+		<div id="box1">
+			css overflow test css overflow test css overflow test 
+			css overflow test css overflow test css overflow test 
+			css overflow test css overflow test css overflow test 
+			css overflow test css overflow test css overflow test 
+			css overflow test css overflow test css overflow test 
+		</div>
+		<br><br><br><br><br><br>
+		
+		<div id="box2">
+			css overflow test2 css overflow test2 css overflow test2 
+			css overflow test2 css overflow test2 css overflow test2 
+			css overflow test2 css overflow test2 css overflow test2 
+			css overflow test2 css overflow test2 css overflow test2 
+			css overflow test2 css overflow test2 css overflow test2 
+		</div>
+		<br><br><br><br><br><br>
+		
+		<div id="box3">
+			css overflow test3 css overflow test3 css overflow test3 
+			css overflow test3 css overflow test3 css overflow test3 
+		</div>
+		<br><br><br><br><br><br>
+		
+		<div id="box4">
+			css overflow test4 css overflow test4 css overflow test4 
+			css overflow test4 css overflow test4 css overflow test4 
+		</div>
+		<br><br><br><br><br><br>
+		
+		
+		
+	</body>
+</html>

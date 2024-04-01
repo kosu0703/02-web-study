@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>블록 레벨 요소, 인라인 요소</title>
+	</head>
+	<body>
+<!-- 
+		1. block level element : 항상 새로운 줄에서 시작하며, 한줄 전체 너비를 차지한다.
+			=> 태그에는 div , p , h1~g6 , table , form , ul , hr 등이 있다.
+			
+		2. inline element : 필요한 만큼만 너비를 차지한다.
+			=> 태그에는 span , input , button , label , img , a 등이 있다.
+
+		** 인라인 요소에는 블록 레벨 요소가 포함될 수 없다.
+
+ -->
+	</body>
+</html>

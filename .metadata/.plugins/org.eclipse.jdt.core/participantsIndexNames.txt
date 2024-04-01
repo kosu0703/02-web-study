@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\kosu0703\webstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2709399037.index
+\ShoseShop\src\main\resources
+D:\kosu0703\webstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3489599699.index
+\01_html\src\main\java

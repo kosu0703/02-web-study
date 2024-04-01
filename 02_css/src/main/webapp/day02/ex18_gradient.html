@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>그라데이션 주기</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 200px;
+				float: left;
+				margin: 50px;
+			}
+			/* 직선 모양으로 그라디언트 주기 */
+			div:nth-of-type(1) {
+				background: linear-gradient(to bottom, blue, red, yellow);
+			}
+			div:nth-of-type(2) {
+				background: linear-gradient(to top, blue, red);
+			}
+			div:nth-of-type(3) {
+				background: linear-gradient(to right, blue, red);
+			}
+			div:nth-of-type(4) {
+				background: linear-gradient(to left, blue, red);
+			}
+			div:nth-of-type(5) {
+				background: linear-gradient(45deg, blue, red);
+			}
+			/* 타원 모양으로 그라데이션 주기 */
+			div:nth-of-type(6) {
+				background: radial-gradient(green, blue, red);
+			}
+		</style>
+	</head>
+	<body>
+<!-- 	
+		linear-gradient(방향, 색상1, 색상2) : 직선 모양을 방향을 따라 그라데이션 적용
+		 
+		radial-gradient(색상1, 색상2) : 타원 모양의 그라데이션 적용
+		
+		** 색상은 추가가 가능하다. 
+ -->		
+		
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</body>
+</html>

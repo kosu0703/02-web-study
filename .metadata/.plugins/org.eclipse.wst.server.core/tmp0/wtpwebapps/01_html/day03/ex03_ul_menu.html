@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ul 태그를 이용한 메뉴바 만들기</title>
+		<style type="text/css">
+			ul {
+				list-style-type: none;	/* disc 지우기 */
+				background-color: #777777;
+				overflow: hidden;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			li{
+				float: left;	/* 한줄로 만들기(옆으로 퍼지기) */
+			}
+			
+			a {
+				text-decoration: none;	/* 밑줄 지우기 */
+				display: block;			/* 블록 레벨로 만들기 */
+				padding: 16px 50px;		/* 상하 , 좌우 너비 지정 */
+				color: white;			/* 글자색 */
+				
+			}
+			/* 마우스를 올렸을때 변화 */
+			a:hover {	
+				background-color: #333333;
+				font-size: 20px;
+				border-bottom: 5px solid skyblue;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<!-- html 을 먼저 만들고 css 를 넣어주자 -->
+		
+		<h2>Navigation Menu</h2>	
+		<p>In this example, 
+		we use CSS to style the list horizontally, 
+		to create a navigation menu:</p>	
+		
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul>
+			
+			
+	</body>
+</html>

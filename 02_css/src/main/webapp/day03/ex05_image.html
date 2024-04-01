@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>반응형 웹 이미지</title>
+		<style type="text/css">
+			img{
+				/* width: 100%; */
+				/* 최대 640px 이상으로는 커지지않는다. */
+				/* max-width: 800px; */
+				
+				/* 원본 이미지 크기 */
+				/* 자기 자신의 크기를 벗어나지 않는다. */
+				max-width: 100%;
+			}
+			
+			/* 부모 너비를 지정하면, 자식은 부모의 제약을 받는다. */
+			/* 화면 너비의 50% */
+			div{
+				width: 50%;
+			}
+		</style>	
+	</head>
+	<body>
+	
+		<div>
+			<img alt="#" src="../images/bear.jpg">
+		</div>
+		
+	</body>
+</html>

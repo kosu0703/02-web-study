@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>테이블 열 색상 채우기</title>
+		<style type="text/css">
+			table {
+				width: 60%;			/* 테이블 크기 조절 */
+				margin: 0 auto;		/* 테이블 자체를 중앙으로 */
+				border-collapse: collapse;	/* 테두리가 분리되는 것을 합쳐서 공백 제거 */
+			}
+			th, td {
+				border-bottom: 1px solid #ddd;	/* 행의 아래에만 선긋기 */
+				padding: 10px;					/* 행의 너비 조절 */
+				text-align: center;				/* 행 안의 글자 정렬 */
+			}
+			
+			/* 마우스 올려놓으면 바뀌는 속성 hover */
+			/* tr:hover {						
+				background-color: #d6eeee;		
+			} */
+			
+		</style>
+		
+	</head>
+	<body>
+		<table>
+			<!-- 테이블 열을 그룹으로 묶어서 색상 지정 -->
+			<!-- 위에서부터 열 순서대로 색상 지정됨 -->
+			<colgroup>
+				<col style="background-color: white;">		<!-- 첫번째 열 -->
+				<col style="background-color: yellow;">		<!-- 두번째 열 -->
+				<col style="background-color: skyblue;">	<!-- 세번째 열 -->
+			</colgroup>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Points</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Peter</td>
+					<td>Griffin</td>
+					<td>$100</td>
+				</tr>
+				<tr>
+					<td>Lois</td>
+					<td>Griffin</td>
+					<td>$150</td>
+				</tr>
+				<tr>
+					<td>Joe</td>
+					<td>Swanson</td>
+					<td>$300</td>
+				</tr>
+				<tr>
+					<td>Cleveland</td>
+					<td>Griffin</td>
+					<td>$250</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

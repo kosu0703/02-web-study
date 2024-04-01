@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02/21 과제</title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+			}
+			header{
+				color: white;
+				background-color: green;
+				padding: 20px;
+			}
+			/* 너비가 600px 보다 크면 가로로 3칸(열이 3개) */
+			/* 600px 이하이면 원래 블록 레벨 요소라 아래로 내려간다. */
+			@media screen and (min-width: 600px){
+				section{
+					display: grid;
+					grid-template-columns: repeat(3,1fr);
+				}
+			}
+			article{
+				padding: 20px;
+			}
+			h2{
+				padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<header>
+			<h1>W3Schools Demo</h1>
+			<p>Resize this responsive page!</p>
+		</header>
+		
+		<section>
+			<article>
+				<h2>London</h2>
+				<p>London is the capital city of England.</p>
+				<br>
+				<p>It is the most populous city in the United Kingdom,
+				 with a metropolitan area of over 13 million inhabitants.</p> 
+			</article>
+			<article>
+				<h2>Paris</h2>
+				<p>Paris is the capital of France.</p>
+				<br>
+				<p>The Paris area is one of the largest population centers 
+				in Europe, with more than 12 million inhabitants.</p> 
+			</article>
+			<article>
+				<h2>Tokyo</h2>
+				<p>Tokyo is the capital of Japan.</p>
+				<br>
+				<p>It is the center of the Greater Tokyo Area, 
+				and the most populous metropolitan area in the world.</p> 
+			</article>
+		</section>
+	
+	</body>
+</html>

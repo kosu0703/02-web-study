@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>웹 페이지에서 영역별 크기</title>
+		<style type="text/css">
+			#p1{ border: 1px solid red; width: 100px; height: 100px; }
+			/* 인라인 요소는 너비와 높이가 적용되지 않는다. */
+			#s1{ border: 1px solid blue; width: 100px; height: 100px; }
+			
+			/* 너비, 높이 주기 */
+			#a1 article{ border: 1px solid red;}
+			#a1 article:nth-of-type(1) { width: 100px; height: 100px; }
+			#a1 article:nth-of-type(2) { width: 20%; height: 20%; }		/* 높이는 동작하지 않는다. */
+			#a1 article:nth-of-type(3) { width: 10vw; height: 10vw; }
+			#a1 article:nth-of-type(4) { width: 10vh; height: 10vh; }	/* 높이도 동작한다. */
+			
+			/* 바깥쪽 여백 주기 */
+			.a2 article{ 
+				width: 50px; 
+				height: 30px; 
+				border: 1px solid green;
+			}
+			/* 바깥쪽 : 상하좌우 20px , 안쪽 : 상하좌우 10px */
+			.a2 article:nth-of-type(1){ margin: 20px; padding: 10px;}
+			/* 상하 20px , 좌우 50px */	
+			.a2 article:nth-of-type(2){ margin: 20px 50px; padding: 10px 20px;}
+			/* 상하 20px , 좌우 중앙정렬 */			
+			.a2 article:nth-of-type(3){ margin: 20px auto; }
+			/* 상 20px , 좌우 중앙정렬 , 하 40px */
+			.a2 article:nth-of-type(4){ margin: 20px auto 40px; }
+			/* 상 0px , 우 10px , 하 20px , 좌 30px */
+			/* 즉, 4개면 시계방향으로 지정 */
+			.a2 article:nth-of-type(5){ margin: 0px 10px 20px 30px; }
+			/* 좌 20px */
+			.a2 article:nth-of-type(6){ margin-left: 20px; }
+			/* 우 20px */
+			.a2 article:nth-of-type(7){ margin-right: 20px; }
+			/* 상 20px */
+			.a2 article:nth-of-type(8){ margin-top: 20px; }
+			/* 하 20px */
+			.a2 article:nth-of-type(9){ margin-bottom: 20px; }
+			
+			/* F12 - 해당 블록 선택 - styles 에서 확인가능 */
+			/* 웹 페이지에는 margin 이 빠진 크기로 보여짐 */
+			
+			/* 박스 크기 지정 */
+				/* 테두리 포함하지 않는 크기 */
+			#box1{ width: 98px; height: 98px; border: 1px solid red; 
+			padding: 0px; }
+				/* 안쪽여백과 테두리 포함하는 크기 */
+			#box2{ width: 100px; height: 100px; border: 1px solid red;
+			padding: 30px; box-sizing: border-box; }
+			
+				/* 바깥쪽 여백은 크기에 포함되지 않는다. */
+		</style>
+	</head>
+	<body>
+<!-- 
+		1. width, height => 블록레벨에서만 사용, 인라인은 사용 못함
+ 			너비, 높이 => 	px	: 절대크기 픽셀 사용
+ 						%	: 부모 태그 기준으로 퍼센트 -> 높이는 동작하지 않는다.
+ 						vw	: 웹 브라우저의 너비를 기준 (백분율로 지정) -> 1vw = 너비/100
+ 						vh	: 웹 브라우저의 높이를 기준 (백분율로 지정) -> 1vh = 높이/100
+ 						
+ 		2. margin : 바깥쪽 여백 지정
+ 		3. padding : 안쪽 여백 지정
+ 		
+ 		4. box-sizing : 박스의 크기 지정
+ 			1) border-box : padding, border 를 포함하는 영역까지 크기를 지정
+ 			2) content-box : 텍스트 크기를 지정하므로 padding 을 주면 전체 크기가 커진다.
+ 
+ -->
+ 		
+ 		<p id="p1">블록 레벨 입니다.</p>
+ 		<span id="s1">인라인 요소 입니다.</span>
+ 		<hr>
+ 		<div id="a1">
+ 			<article>100px</article>
+ 			<article>20%</article>
+ 			<article>10vw</article>
+ 			<article>10vh</article>
+ 		</div>
+ 		<hr>
+ 		<img alt="#" src="../images/img01.png">
+ 		<div class="a2">
+ 			<article>box1</article>
+ 			<article>box2</article>
+ 			<article>box3</article>
+ 			<article>box4</article>
+ 			<article>box5</article>
+ 			<article>box6</article>
+ 			<article>box7</article>
+ 			<article>box8</article>
+ 			<article>box9</article>
+ 		</div>
+ 		<hr>
+ 		<div id="box1"></div>
+ 		<div id="box2"></div>
+ 
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>문단 태그 : p</title>
+	</head>
+	<body>
+<!-- 
+	p 태그 : 문단 태그, **블록 레벨
+	br 태그 : 단순 줄바꿈 태그
+	pre 태그 : 있는 그대로 보여주는 태그
+	span 태그 : 특별한 기능이 없는 인라인 레벨 태그로, 일반 글자들을 태그로 묶음 
+				(html 에서는 일반 글자를 그냥 쓰면 안되므로) 
+					
+ -->
+		<p>
+		This paragraph<br>
+		contains a lot of lines<br>
+		in the source code,<br>
+		but the browser<br>
+		ignores it.
+		</p>
+		
+		<!-- p 태그 안에서는 줄바꾸기 위해서 br 태그 사용 -->
+		<!-- p 태그끼리는 자동 줄바꿈 된다. -->
+		
+		<p>
+		This paragraph
+		contains         a lot of spaces
+		in the source         code,
+		but the        browser
+		ignores it.
+		</p>
+		
+ <!-- **띄어쓰기, 줄바꿈 모두 태그를 사용해야지만 웹페이지에 적용된다.	
+	(즉, 문단 태그 안에서 띄어쓰기, 줄바꿈을 사용해도 웹페이지에는 적용되지 않는다.)	 -->
+	
+		<hr>
+		<span>이것은 단순 줄 바꿈 태그이다.</span><br>
+		<span>일반 글자들은 span 태그를 사용하자.</span>
+		
+		<hr>
+		
+	<!-- pre 태그는 띄어쓰기, 줄바꿈, 공백 모두 적용된다. -->	
+		
+		<pre>
+			<h3>
+			This paragraph
+			contains         a lot of spaces
+			in the source         code,
+			but the        browser
+			ignores it.
+			</h3>
+		</pre>
+ 
+ 	<!-- 위 방법보다는 아래와 같이 크기와 굵기를 조절해서 사용한다. -->
+ 	
+ 		<pre style="font-size: 20px">
+			This paragraph
+			contains         a lot of spaces
+			in the source         code,
+			but the        browser
+			ignores it.
+		</pre>
+		
+	</body>
+</html>

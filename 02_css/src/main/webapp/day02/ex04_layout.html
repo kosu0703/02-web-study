@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>레이아웃 메뉴만들기3</title>
+		<style type="text/css">
+			/* 섹션 전체 설정 */
+			.wrap {
+				margin: 0px auto;	/* 바깥쪽 여백 : 중앙 정렬 */
+			}
+			.left, .center, .right{
+				height: 400px;
+				float: left;
+			}
+			/* 왼쪽 섹션 */
+			.left{
+				width: 30%;
+				background-color: pink; 
+			}
+			/* 중앙 섹션 */
+			.center{
+				width: 40%;
+			}
+			/* 오른쪽 섹션 */
+			.right{
+				width: 30%;
+				background-color: lightblue;
+			}
+			/* 가상요소: float 해제 => 선택한 요소의 끝부분에 생성된 콘테츠를 추가 */
+			/* footer 를 아래로 배치하기 위해서 */
+			.wrap::after{
+			  content:'';
+			  display:block; 
+			  clear: both; 		/* float 해제 */
+			}
+			
+			/* 헤더, 메뉴, 본문, 푸터 설정 */
+			#header{background-color: lightgray; 
+				    padding: 30px;
+				    text-align: center;
+				    font-size: 30px;
+				    color: white;
+			}
+			#footer{background-color: lightgray; 
+				      padding: 10px;
+				      text-align: center;
+				      font-size: 20px;
+				      color: white;
+			}
+			#nav{
+				background-color: #777777;
+				overflow:hidden;
+				padding: 0px;
+				margin: 0px;
+			}
+			#nav ul{
+				margin: 0px;
+				padding: 0px;
+			 	list-style-type:none;
+			}
+			#nav ul li{
+				color: white;
+				padding: 10px 30px;
+				margin: 30px 20px;
+				float: left;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div id="header">
+			<h1>헤더부분</h1>
+		</div>
+		
+		<div id="nav">
+			<ul>
+				<li>메뉴1</li>
+				<li>메뉴2</li>
+				<li>메뉴3</li>
+			</ul>
+		</div>
+		
+		<!-- Float을 이용한 블록요소 좌우 배치 -->
+		<div class="wrap">
+		   <section class="left"></section>
+		   <section class="center"></section>
+		   <section class="right"></section>
+		</div>
+		
+		<div id="footer">
+			<p> 푸터 </p>
+		</div>
+		
+	</body>
+</html>

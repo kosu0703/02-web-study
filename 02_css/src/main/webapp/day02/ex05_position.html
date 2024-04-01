@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>위치 지정하기</title>
+		<style type="text/css">
+			section{
+				width: 600px;
+				height: 200px;
+			}
+			section:nth-of-type(1) {
+				background-color: pink;
+			}			
+			
+			/* 포지션만 이동할뿐 원래 문서 흐름의 영역을 포함한다. */
+			section:nth-of-type(2) {
+				background-color: lightblue;
+				position: relative;
+				top: -100px;
+				left: 100px;
+			}
+						
+			/* 전체 흐름에는 영향을 받지 않는다 */
+			section:nth-of-type(3) {
+				background-color: green;
+			}			
+		</style>
+	</head>
+	<body>
+<!-- 
+		position : 요소의 위치를 지정하는 속성
+		
+			1) static : 기본값, 다른 요소와 겹치지 않게 문서의 흐름에 거스르지 않는다. 
+						top, bottom, left, right 속성에 영향을 받지 않는다.
+			
+			2) relative : 원래 위치값을 기준으로 top, bottom, left, right 이동
+							** 아래 요소는 그대로 원래의 문서 흐름에서 거스르지 않는다.
+							(즉 , 포지션을 사용해도 원래 문서 흐름에서의 영역을 포함하고 있다.)
+							
+			3) absolute : 일반적인 문서 흐름을 제거하고, 가장 가까운 부모 position 기준으로 상대 위치 지정
+						만약에 position 이 없으면 body 를 기준으로 이동
+						(즉, 부모가 없으면 fixed 처럼 절대 좌표 설정이 됨)
+						
+			4) fixed : 일반적인 문서 흐름을 제거하고, 지정한 위치 고정 (절대 좌표)
+
+			5) sticky : 일반적인 문서 흐름을 제거하고, 스크롤 동작이 존재하는 가장 가까운 요소에 위치 지정
+ -->
+ 
+ 		<section></section>
+ 		<section></section>
+ 		<p>한국 ICT 인재 개발원</p>
+ 		<section></section>
+ 
+ 
+	</body>
+</html>

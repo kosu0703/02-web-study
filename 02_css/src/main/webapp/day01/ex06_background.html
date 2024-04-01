@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>배경 꾸미기</title>
+		<style type="text/css">
+			p{ background-color: red; }
+			span{ background-color: blue; }
+			#s1 {
+				background-image: url("../images/pattern.png");
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			#s2 {
+				background-image: url("../images/pattern.png");
+				background-repeat: repeat;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* 바둑판식 x */
+			#s3 {
+				background-image: url("../images/pattern.png");
+				background-repeat: no-repeat;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* x축만 나열 */
+			#s4 {
+				background-image: url("../images/pattern.png");
+				background-repeat: repeat-x;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* y축만 나열 */
+			#s5 {
+				background-image: url("../images/pattern.png");
+				background-repeat: repeat-y;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* 바둑판식 x , 가운데만 */
+			#s6 {
+				background-image: url("../images/pattern.png");
+				background-repeat: no-repeat;
+				background-position: center center;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* 오른쪽 아래 */
+			#s7 {
+				background-image: url("../images/pattern.png");
+				background-repeat: no-repeat;
+				background-position: right bottom;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* 픽셀로 위치 지정 */
+			#s8 {
+				background-image: url("../images/pattern.png");
+				background-repeat: no-repeat;
+				/* 왼쪽에서 20px , 위에서 60px */
+				background-position: 20px 60px;		
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}	
+			/* 퍼센트로 위치 지정 */
+			#s9 {
+				background-image: url("../images/pattern.png");
+				background-repeat: no-repeat;
+				/* 왼쪽에서 100% , 위에서 50% */
+				background-position: 100% 50%;
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;	
+			}
+			#s10 {
+				width: 300px;
+				height: 200px;
+				border: 1px solid #000;	
+				background-image: url("../images/rose.jpg");
+				background-repeat: no-repeat;
+				background-position: center;
+				/* 원래 이미지 비율을 유지하면서 화면 채우기 */
+				/* 하지만 빈공간이 생길 수 있다. */
+				background-size: contain;
+			}	
+			#s11 {
+				width: 300px;
+				height: 200px;
+				border: 1px solid #000;	
+				background-image: url("../images/rose.jpg");
+				background-repeat: no-repeat;
+				background-position: center;
+				/* 원래 이미지 비율을 유지하면서 */
+				/* 빈공간 없이 채움 */
+				background-size: cover;
+			}	
+		</style>
+	</head>
+	<body>
+		
+		<p>블록 레벨 입니다.</p>
+		<span>인라인 입니다.</span>	
+		<hr>
+		
+<!-- 
+		배경 그림
+		background-image : url(이미지위치) => 자동으로 바둑판식
+ -->			
+ 		
+ 		<section id="s1"></section>
+ 		<section id="s2"></section>
+ 		<section id="s3"></section>
+ 		<section id="s4"></section>
+ 		<section id="s5"></section>
+ 		<section id="s6"></section>
+ 		<section id="s7"></section>
+ 		<section id="s8"></section>
+ 		<section id="s9"></section>
+ 		<section id="s10"></section>
+ 		<section id="s11"></section>
+
+	</body>
+</html>
