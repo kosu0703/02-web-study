@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+				position: absolute;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				//	오른쪽 버튼을 누르면 현재 왼쪽기준으므로
+				//	왼쪽에서 멀어져야 한다.
+				$("#right").on("click" ,function() {
+					$(".box").animate({
+						left: "+=50px"
+					}, "fast");
+				});
+				
+				//	왼쪽 버튼을 누르면 왼쪽으로 가까워져야 한다.
+				$("#left").on("click" , function() {
+					$(".box").animate({
+						left: "-=50px"
+					}, "fast");
+				});
+				
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<button id="left">왼쪽 이동</button>
+		<button id="right">오른쪽 이동</button>
+		<hr>
+		<div class="box"></div>
+	
+	</body>
+</html>

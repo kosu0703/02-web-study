@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>속성 상태 => :selected , :checked , :visible , :hidden</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				//	아이디가 wrap 안에서 p 태그 중 숨겨진 속성을 가진 요소를 선택
+				$(`#wrap p :hidden`).css({"display":"block", "backgroundColor":"green"});
+				
+				//	selected => select 태그에서 선택된 요소
+				//	val() => form 태그의 값을 의미한다.
+				const z1 = $(`#zone1 :selected`).val();
+				console.log(z1);
+				
+				//	checked => checkbox 와 radio 버튼에서 체크된 요소
+				const z2 = $(`#zone2 :checked`).val();
+				console.log(z2);
+				const z3 = $(`#zone3 :checked`).val();
+				console.log(z3);
+			});
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="wrap">
+	        <p>내용1</p>
+	        <p style="display:none">내용2</p>
+	        <p>내용3</p>
+	    </div>
+	    <form action="#">
+	        <p id="zone1">
+	        <select name="course" id="course">
+	                <option value="opt1">옵션1</option>
+	                <option value="opt2" selected>옵션2</option>
+	                <option value="opt3">옵션3</option>
+	        </select>
+	        </p>
+	        <p id="zone2">
+	        		<!-- checkbox 는 아이디와 이름을 똑같이 하자 -->
+	                <input type="checkbox" name="hobby" value="독서"> 독서
+	                <input type="checkbox" name="hobby" value="자전거"> 자전거
+	                <input type="checkbox" name="hobby" value="등산" checked> 등산
+	        </p>
+	        <p id="zone3">
+	                <input type="radio" name="gender" value="male"> 남성
+	                <input type="radio" name="gender" value="female" checked> 여성
+	        </p>
+	    </form>
+		
+	</body>
+</html>

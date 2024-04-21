@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>xml 파일 data 가져오기</title>
+		<style type="text/css">
+		    table {
+		        width: 600px; margin-top: 50px; border-collapse: collapse;
+		    }
+		    table, th, td {border: 1px solid green; text-align: center;}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#btn").click(function() {
+					//	버튼 누를때마다 초기화
+					$("#result").empty();
+					
+					let table = "<table>";
+					table += "<thead>";
+					table += "<tr><th>이름</th><th>개수</th></tr>";
+					table += "</thead>";
+					table += "<tbody>";
+					
+					$.get("data02.xml", function(data) {
+						$(data).find("product").each(function() {	
+							let name = $(this).attr("name");	
+							let count = $(this).attr("count");
+							table += "<tr>" ;
+							table += `<td>${name}</td>` ;
+							table += `<td>${count}</td>` ;
+							table += "</tr>" ;
+						});
+						table += "</tbody></table>";
+						$("#result").append(table);
+					})
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div id="btn">가져오기</div>
+		<div id="result"></div>
+		
+	</body>
+</html>

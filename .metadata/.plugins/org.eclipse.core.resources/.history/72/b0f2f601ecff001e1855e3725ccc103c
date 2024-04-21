@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>json 파일 data 가져오기</title>
+		<style type="text/css">
+		    table {
+		        width: 600px; margin-top: 50px; border-collapse: collapse;
+		    }
+		    table, th, td {border: 1px solid green; text-align: center;}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#btn").click(function() {
+					//	버튼 누를때마다 초기화
+					$("#result").empty();
+					
+					let table = "<table>";
+					table += "<thead>";
+					table += "<tr><th>이름</th><th>범위</th></tr>";
+					table += "</thead>";
+					table += "<tbody>";
+					
+					$.getJSON("data04.js", function(data) {
+						//	배열이므로 each , json 데이터는 key : value 형식
+						$.each(data, function(key, value) {
+							table += "<tr>";
+							//	key 는 인덱스 , value 는 Object 
+							//	value 를 사용해서 데이터를 가져오자
+							table += `<td>${value.name}</td>`;				
+							table += `<td>${value.scope}</td>`;				
+							table += "</tr>";
+						})
+						table += `</tbody></table>`;
+						$("#result").append(table);
+					})
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="btn">가져오기</div>
+		<div id="result"></div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>txt 데이터 가져오기</title>
+		<style type="text/css">
+		    table {
+		        width: 600px; margin-top: 50px; border-collapse: collapse;
+		    }
+		    table, th, td {border: 1px solid green; text-align: center;}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#btn").click(function() {
+					$("#result").empty();
+					
+					$.ajax({
+						url : "data05.txt",
+						method : "get",
+						dataType : "text",
+						success : function(data) {
+							let table = "<table>";
+							table += "<thead>";
+							table += "<tr><th>번호</th><th>이름</th><th>나이</th><th>주소</th></tr>";
+							table += "</thead>";
+							table += "<tbody>";
+							
+							//	슬래시 / 로 쪼개주세요
+							const rows = data.split("/");
+							//	배열이므로 for 문
+							for ( let k in rows) {
+								table += "<tr>";
+								//	컴마 , 로 쪼개주세요
+								const cols = rows[k].split(",");
+								for ( let i in cols) {
+									table += `<td>${cols[i]}</td>`;
+								}
+								table += "</tr>";
+							}
+							
+							table += "</tbody></table>";
+							$("#result").append(table);
+						},
+						error : function() {
+							alert("가져오기 실패");
+						}
+					});
+					
+				})
+				
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div id="btn">가져오기</div>
+		<div id="result"></div>
+	
+	</body>
+</html>

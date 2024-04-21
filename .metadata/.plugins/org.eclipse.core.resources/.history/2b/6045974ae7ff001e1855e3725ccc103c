@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>제이쿼리 - 한줄 뉴스</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				const news = ["연임 사실상 확정…대한상의 '최태원 2기' 시대 개막",
+							"尹, '저커버그'와 30분 회담…메타가 상상한 것, 한국이 적극 지원",
+							"에코프로 형제, 코스피 이전·액면분할에 '들썩'...다시 볕드나",
+							"전공의 294명 복귀...국립의대 교수 1천명 증원",
+							"[의대증원 파장] 전공의 복귀시한 디데이…무더기 사법처리 '만지작'",
+							"'웨딩 임파서블' 문상민, 첫 주연 합격점 [TF초점]"];	
+				
+				let index = 0;
+				let timer;
+				
+				setInterval(() => {
+					$("#myDiv").text(news[index++]);
+					if(index === news.length){index=0};
+				}, 2000);
+				
+			})
+		</script>
+	</head>
+	<body>
+
+		<div id="myDiv"></div>
+
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>add 클래스</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<style type="text/css">
+			/* 방법2 */
+			.silver{
+				background-color: silver;
+			}
+			/* 방법3 */
+			/* 스타일이 클래스여야 한다. */
+			.bg_skyblue{
+				background-color: skyblue;
+			}
+		</style>
+		<script type="text/javascript">
+			/* 방법2 */
+			function msg_go() {
+				alert(`HI~~~~~~~~`);
+			}
+		</script>
+	</head>
+	<body>
+<!-- 
+		addClass : 특정 요소에 스타일을 추가(적용)
+ -->
+ 		<!-- 방법1 -->
+ 		<div style="background-color: yellow;" onclick="javascript:alert(`hi`)">안녕하세요 jQuery-1 입니다.</div>
+ 		<!-- 방법2 -->
+ 		<div class="silver" onclick="msg_go()">안녕하세요 jQuery-2 입니다.</div>
+ 		<!-- 방법3 -->
+ 		<div id="k1">안녕하세요 jQuery-3 입니다.</div>
+ 		<!-- 방법4 -->
+ 		<div id="k2">안녕하세요 jQuery-4 입니다.</div>
+
+
+
+		<script type="text/javascript">
+			/* 방법3 */
+			$("#k1").addClass("bg_skyblue");
+			/* 방법4 */
+			$("#k2").click(function() {
+				alert(`hello~~~~~`);
+			});
+		</script>
+
+
+	</body>
+</html>

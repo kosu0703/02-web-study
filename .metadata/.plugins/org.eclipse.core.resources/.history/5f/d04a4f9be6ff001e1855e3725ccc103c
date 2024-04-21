@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션</title>
+		<style type="text/css">
+			img{
+				position: absolute;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+				let position = 0;
+				let timer;
+				
+				$("#btn").click(function() {
+					//	setInterval() => 지정한 시간 후 콜백함수를 실행하는데 반복적으로 실행
+					//										(즉, 무한반복)
+					//	clearInterval() 로 실행종료
+					timer = setInterval(() => {
+						position += 5;
+						$("img").css({"marginLeft": position , "marginTop": position});
+					}, 100);
+				});
+				
+				$("img").click(function() {
+					clearInterval(timer);
+				})
+				
+			});	
+		</script>
+	</head>
+	<body>
+		
+		<button id="btn">대각선 이동</button>
+		<hr>
+		<div>
+			<img alt="" src="../images/img03.jpg">
+		</div>
+			
+	</body>
+</html>
