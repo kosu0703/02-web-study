@@ -3,3 +3,5 @@ D:\kosu0703\webstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\27093
 \ShoseShop\src\main\resources
 D:\kosu0703\webstudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3489599699.index
 \01_html\src\main\java
+D:\kosu0703\03_web_study\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3976513753.index
+\01_html\src\main\java

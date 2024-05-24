@@ -1,0 +1,47 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.detail_main {
+	margin-top: 30px;
+	float: left;
+}
+
+.main_image {
+	width: 50%;
+	height: 500px;
+	background-color: pink;
+	display: block;
+}
+
+.main_content {
+	width: 50%;
+	height: 500px;
+	background-color: lightgreen;
+}
+
+.detail_content {
+	width: 1000px;
+	height: 300px;
+	background-color: lightgray;
+}
+
+.detail_map {
+	width: 1000px;
+	height: 400px;
+	background-color: skyblue;
+}
+
+.detail_path {
+	width: 1000px;
+	height: 300px;
+	background-color: black;
+}
+
+
+
+
+
+

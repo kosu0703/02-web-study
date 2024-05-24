@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.detail_main {
+	margin-top: 30px;
+	float: left;
+}
+
+.main_image {
+	width: 400px;
+	height: 500px;
+	background-color: pink;
+}
+
+.main_content {
+	width: 400px;
+	height: 500px;
+	background-color: lightgreen;
+}
+
+
+
+
+
+
+

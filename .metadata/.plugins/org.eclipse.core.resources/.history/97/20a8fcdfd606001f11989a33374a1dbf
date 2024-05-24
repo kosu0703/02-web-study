@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.detail_main {
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.main_image {
+	height: 500px;
+	background-color: pink;
+}
+
+.main_content {
+	height: 500px;
+	background-color: lightgreen;
+}
+
+
+
+
+
+
+
