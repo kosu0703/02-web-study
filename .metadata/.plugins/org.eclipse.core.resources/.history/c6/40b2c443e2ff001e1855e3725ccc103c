@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이벤트 on</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+			
+		/* 
+			이벤트 기본 형식) 
+		
+			1. 단일 동작 => 보통 click 사용
+				$(이벤트대상).click(function(){실행내용(JS 또는 jQuery)});
+				
+
+			2. 그룹(한가지 동작 이상의 이벤트를 등록할때) => 보통 on 사용
+				방법1)
+				$(이벤트대상).on(이벤트종류1, 이벤트종류2, ... function(){실행내용(JS 또는 jQuery)});
+				
+				방법2)
+				$(이벤트대상).on({이벤트종류1, 이벤트종류2, ... function(){실행내용(JS 또는 jQuery)}});
+				
+				방법3)
+				$(이벤트대상).on({
+					이벤트종류1 : function(){실행내용(JS 또는 jQuery)},
+					이벤트종류2 : function(){실행내용(JS 또는 jQuery)},
+					이벤트종류3 : function(){실행내용(JS 또는 jQuery)}
+				});
+				
+		*/
+		
+			$(document).ready(function() {
+				
+				$(".btn1").click(function() {
+					$("p:eq(1)").css("color", "red");
+					$("p:nth-of-type(2)").css("color", "blue");
+					$(".btn1").parent().next().css("color", "red");
+				});
+				
+				//	마우스포인터를 올리거나 , 포커스를 이용하면 글자색 초록색
+				$(".btn2").on({
+					"mouseover focus" : function() {
+						$(".btn2").parent().next().css("color", "green");
+					},
+					//	마우스포인터를 빼거나 , 포커스를 없애면 다시 원래대로
+					"mouseout blur" : function() {
+						$(".btn2").parent().next().css("color", "black");
+					}
+				});
+				
+			});
+		</script>
+		
+	</head>
+	<body>
+ 
+ 		<p><button class="btn1">클릭하면 글자색을 빨간색</button></p>
+ 		<p>내용-1</p>
+ 		<p><button class="btn2">마우스포인터를 올리거나 포커스를 이용하면 글자색 초록색</button></p>
+ 		<p>내용-2</p>
+	
+	</body>
+</html>

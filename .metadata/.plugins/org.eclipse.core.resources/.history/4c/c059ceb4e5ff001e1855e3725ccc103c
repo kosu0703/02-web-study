@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>애니메이션</title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				/* $(선택자).animate({params}, speed, callback) */	
+				//	params => 보통 CSS 속성을 정의 (그래야 애니메이션 효과)
+				//	speed => 밀리초
+				//	callback => 애니메이션 실행 효과가 100% 완료후 콜백함수 실행
+				
+				let i = 0;
+				$("#btn").click(function() {
+					//	토글 기능 만들기
+					if (i++%2==0) {
+						$("#div").animate({
+						//	끝 크기를 알려주면 자동으로 애니메이션 효과가 진행됨
+							width: "250px",
+							height: "400px",
+						}, 3000, function() {
+							alert("늘리기 성공");
+						});
+					}else {
+						$("#div").animate({
+							width: "100px",
+							height: "100px",
+						}, 3000, function() {
+							alert("줄이기 성공");
+						});
+					}
+				});
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		
+		<button id="btn">애니메이션</button>
+		<hr>
+		<div id="div"></div>
+			
+	</body>
+</html>

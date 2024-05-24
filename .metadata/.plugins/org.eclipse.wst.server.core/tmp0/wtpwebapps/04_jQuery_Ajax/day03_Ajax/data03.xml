@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product name="제네시스" count="5">현대자동차</product>
+	<product name="티볼리" count="3">쌍용자동차</product>
+	<product name="그렌져" count="4">현대자동차</product>
+	<product name="카니발" count="5">기아자동차</product>
+	<product name="트위치" count="2">르노자동차</product>
+</products>
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.4+D:\kosu0703\03_web_study\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 3976513753.index
 3401591145.index
@@ -9,3 +10,11 @@ INDEX VERSION 1.4+D:\kosu0703\03_web_study\.metadata\.plugins\org.eclipse.wst.js
 1810826432.index
 2207266649.index
 2634941862.index
+=======
+INDEX VERSION 1.4+C:\kosu0703\03_web\02-web-study\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2992885960.index
+2207266649.index
+883817423.index
+1369265305.index
+1941306848.index
+>>>>>>> ed9f03b984a288ecf1d26e7947d7a124096fe96b

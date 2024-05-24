@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>이벤트 처리</title>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				
+			//	마우스 이벤트 : click , on , bind , dblclick , mouseover , mouseout
+			
+			//	click
+			//$("#p1").click(function(){alert("클릭성공")});
+			 
+			//	on => 이벤트종류를 써줘야 한다.	
+			//$("#p1").on("click", function(){alert("클릭성공2")});
+			
+			//	bind => 동적처리 가능
+			//$("#p1").bind("click", function(){alert("클릭성공3")});
+				
+			//	dblclick
+			$("#p1").bind("dblclick", function(){alert("클릭성공4")});
+			
+			//	이미지에 마우스 올렸을때 이미지 변경
+			$("#img").mouseover(function() {
+				$("#img").attr("src", "../images/img06_2.gif");
+			});
+			
+			//	이미지에 마우스가 벗어나면 원래 이미지로 변경
+			$("#img").mouseout(function() {
+				//$("#img").attr("src", "../images/img06_1.gif")
+				//	자기자신에 이벤트 처리하므로
+				$(this).attr("src", "../images/img06_1.gif");
+			});
+			
+			//	글자를 입력하면 => keyup
+			//	값을 가져오기 => val()
+			$("#uname").keyup(function() {
+				let name = $(this).val();
+				//	문자를 누를때마다 누적된다.
+				console.log(name);
+			});
+			
+			//	체크박스를 체크했냐 안했냐 => change()
+			$("#chk").change(function() {
+				//	값 가져오기 => val()
+				//const str = $("#addr").val();
+				//	값 넣기 => val(값)
+				//$("#addr2").val(str);
+				
+				//	체크했으면 넣고, 안했으면 빼기
+				const str = $("#addr").val();
+						//	체크가 되었으면 true
+				if ($(this).is(":checked")) {
+					$("#addr2").val(str);
+				}else {
+							//	아니면 비우자
+					$("#addr2").val("");
+				}
+			});
+			
+			//	비밀번호
+			$("#pwd2").keyup(function() {
+				if ($("#pwd").val() === $(this).val()) {
+					$("#s1").html("<b>암호가 맞네요</b>");
+				}else {
+					$("#s1").html("<b>암호가 틀리네요</b>");
+				}
+			});
+			
+			//	라디오 버튼
+			$("input[type=radio]").change(function() {
+				let str = $(this).val();
+				console.log(str);
+			});
+			
+			//	select 옵션 선택했는지 안했는지
+			$("#sel").change(function() {
+				let str = "";
+				//	여러개 선택될수 있으므로 each 로 확인 (for문과 같음)		// cf. map 은 배열로 반환
+				$("#sel option:selected").each(function() {
+					//	돌때마다 선택된거 누적
+					str += $(this).text() + " ";
+				});
+				$("#s2").text(str);
+			});
+			
+			})
+		</script>
+		
+	</head>
+	<body>
+	
+		<p><span id="p1">이벤트처리</span></p>
+		<p><img alt="" src="../images/img06_1.gif" id="img"></p>
+		<p>이름 : <input type="text" name="uname" id="uname"></p>
+		<hr>
+		<p>주소 : <input type="text" name="addr" id="addr"></p>
+		<p><input type="checkbox" id="chk">상동</p>
+		<p>주소 : <input type="text" name="addr2" id="addr2"></p>
+		<hr>
+		
+		<p>비번 : <input type="password" name="pwd" id="pwd"></p>
+		<p>비번확인 : <input type="password" name="pwd2" id="pwd2"></p>
+		<p><span id="s1"></span></p>
+		<hr>
+		
+		<p>
+			<!-- value 값이 없으면, 체크될시 기본값 on 이 나온다. -->
+			<input type="radio" name="fg_color" value="red">RED
+			<input type="radio" name="fg_color" value="blue">BLUE
+			<input type="radio" name="fg_color" value="green">GREEN
+		</p>
+		<hr>
+		
+		<select name="sweets" multiple="multiple" id="sel" size="6">
+		  <option>Chocolate</option>
+		  <option>Candy</option>
+		  <option>Taffy</option>
+		  <option>Caramel</option>
+		  <option>Fudge</option>
+		  <option>Cookie</option>
+		</select>
+		<div></div>
+		<p><span id="s2"></span></p>
+		 
+	</body>
+</html>

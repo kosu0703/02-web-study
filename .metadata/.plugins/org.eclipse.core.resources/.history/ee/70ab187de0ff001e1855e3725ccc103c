@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>map() , grep()</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				/* map */
+				const arr1 = [	{addr:"서울", name:"무대리"},
+								{addr:"부산", name:"홍과장"},	
+								{addr:"대전", name:"박사장"}	];
+				
+				//	1. $.map(배열, 콜백함수)
+				//	Function( Object elementOfArray, Integer indexInArray ) => Object
+				const res1 = $.map(arr1, function(obj, idx) {
+					if(obj.addr === "서울")
+					return obj.name;
+				})
+				console.log(res1);
+				
+				//	2. $.map(Object, 콜백함수)
+				//	Function( Object propertyOfObject, String key ) => Object	
+				
+				/* grep */
+				//	초기값 자리에 true 를 사용하면 리턴값에 반대되는 값을 반환
+				
+				//	1. 서울인 요소만 배열로 반환
+				const res2 = $.grep(arr1, function(obj, idx) {
+						return obj.addr === "서울";
+				});		
+				console.log(res2);	
+				
+				//	2. 서울을 제외한 요소만 배열로 반환
+				const res3 = $.grep(arr1, function(obj, idx) {
+						return obj.addr === "서울";
+				}, true);		
+				console.log(res3);	
+				
+				//	3. 0 보다 큰 숫자를 포함하도록 숫자 배열을 필터링한다.
+				const res4 = $.grep([0,1,2] , function(n,i) {
+					return n > 0;
+				});
+				console.log(res4);
+				
+				//	4. 0 보다 크지 않은 숫자를 포함하도록 숫자 배열을 필터링한다.
+				//		true 를 사용하면 위와 반대결과가 나온다.
+				const res5 = $.grep([0,1,2] , function(n,i) {
+					return n > 0;
+				}, true);
+				console.log(res5);
+				
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
